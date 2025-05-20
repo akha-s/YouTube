@@ -182,7 +182,28 @@ body {
   display: flex;
 }
 
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.btn {
+  min-width: -moz-max-content;
+  min-width: max-content;
+  padding: 10px 13px;
+  border-radius: 10px;
+  border: none;
+  background-color: #a9a6a6;
+  color: rgb(47, 47, 47);
+}
+
 .bun {
+  min-width: -moz-max-content;
+  min-width: max-content;
   padding: 10px 13px;
   border-radius: 10px;
   border: none;
@@ -194,18 +215,11 @@ body {
   background-color: #9e9a9a;
 }
 
-.btn {
-  padding: 10px 13px;
-  border-radius: 10px;
-  border: none;
-  background-color: #a9a6a6;
-  color: rgb(47, 47, 47);
-}
-
 .buttons {
+  width: 1200px;
   display: flex;
   flex-direction: column;
-  padding: 29px 48px;
+  padding: 13px 24px;
   gap: 20px;
 }
 

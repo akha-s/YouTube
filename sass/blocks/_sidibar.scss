@@ -65,7 +65,23 @@
   display: flex;
 }
 
+.btns {
+  @include d-flex(flex-start, 12px);
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.btn {
+  min-width: max-content;
+  padding: 10px 13px;
+  border-radius: 10px;
+  border: none;
+  background-color: #a9a6a6;
+  color: rgb(47, 47, 47);
+}
+
 .bun {
+  min-width: max-content;
   padding: 10px 13px;
   border-radius: 10px;
   border: none;
@@ -76,18 +92,11 @@
   background-color: #9e9a9a;
 }
 
-.btn {
-  padding: 10px 13px;
-  border-radius: 10px;
-  border: none;
-  background-color: #a9a6a6;
-  color: rgb(47, 47, 47);
-}
-
 .buttons {
+  width: 1200px;
   display: flex;
   flex-direction: column;
-  padding: 29px 48px;
+  padding: 13px 24px;
   gap: 20px;
 }
 
