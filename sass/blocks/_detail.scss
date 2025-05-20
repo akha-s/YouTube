@@ -1,0 +1,135 @@
+.detail__Wrapper{
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    .detail__video{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .opisaine{
+            width: 100%;
+            margin-top: 20px;
+           .views{
+             width: 100%;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 12px;
+            background-color: #0000000D;
+            .view{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: $primary;
+            }
+            span{
+                display: flex;
+                gap: 10px;
+                .about-opisanie,.link{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: $primary;
+            }
+            .more{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: $primary;
+            }
+            }
+           }
+            
+        }
+        .video{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .title{
+            width: 100%;
+            .video-name{
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 28px;
+                color: $primary;
+                margin-top: 10px;
+            }
+            .about__Wrapper{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                .channel-right{
+                    display: flex;
+                    gap: 10px;
+                    .like-dislike{
+                        display: flex;
+                        gap: 7px;
+                        .chiziq{
+                            width: 1px;
+                            height: 100%;
+                            background-color: $primary;
+                        }
+                    }
+                }
+                .channel-left{
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    .channel-img img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                    .channel{
+                        display: flex;
+                        flex-direction: column;
+                        .channel-name{
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: $primary;
+                            gap: 10px;
+                            display: flex;
+                        }
+                        .subscriber{
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 18px;
+                            color: $secondary-text;
+                            gap: 10px;
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detail__other-video{
+        width: 30%;
+    }
+}
+
+.join-channel{
+    @include join-button;
+}
+.like-dislike{
+    @include join-button;
+}
+.share{
+    @include join-button;
+}
+.dot{
+    @include join-button;
+}
+.save{
+    @include join-button;
+}
+.subscribe{
+    @include join-button ($primary,$bg-color);
+}

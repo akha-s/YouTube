@@ -1,0 +1,14 @@
+@media (max-width:725px) {
+    .about__Wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width:1100px){
+    .detail__Wrapper{
+        flex-direction: column;
+        .detail__video{
+            width: 100%;
+        }
+    }
+}
