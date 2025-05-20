@@ -1,0 +1,13 @@
+@mixin d-flex($j: center, $gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: $j;
+  gap: $gap;
+}
+
+@mixin font($weight: 400, $size: 15px, $height: 18.15px, $color: $light) {
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+  font-weight: $weight;
+}
