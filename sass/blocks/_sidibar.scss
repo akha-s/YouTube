@@ -1,0 +1,118 @@
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  height: 80vh;
+  padding-top: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+  transition: background-color 0.3s;
+}
+
+.menu-item i {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.menu-item:hover {
+  background-color: #f2f2f2;
+}
+
+.menu-item.active {
+  background-color: #e5e5e5;
+  border-radius: 10px;
+}
+
+.sign__in {
+  font-weight: 400;
+  font-size: 18px;
+  width: 210px;
+  margin-top: 13px;
+  margin-left: 20px;
+}
+
+.explore {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: 400px;
+}
+.siign-in {
+  margin-left: 13px;
+  border: 1px solid #065fd4;
+  color: #065fd4;
+  background: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.m {
+  margin-top: 14px;
+}
+
+.sidiber {
+  justify-content: start;
+  align-items: start;
+  display: flex;
+}
+
+.bun {
+  padding: 10px 13px;
+  border-radius: 10px;
+  border: none;
+  background-color: #141313;
+  color: white;
+}
+.bun:hover {
+  background-color: #9e9a9a;
+}
+
+.btn {
+  padding: 10px 13px;
+  border-radius: 10px;
+  border: none;
+  background-color: #a9a6a6;
+  color: rgb(47, 47, 47);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 29px 48px;
+  gap: 20px;
+}
+
+.vd__info {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+  align-items: start;
+}
+
+.neew {
+  font-size: 16px;
+  max-width: 310px;
+}
+.eye {
+  max-width: 50px;
+}
+
+.vieo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 370px);
+
+  grid-gap: 16px;
+  height: 80vh;
+  background-color: red;
+  overflow: scroll;
+  padding: 20px;
+}
