@@ -117,7 +117,7 @@ body {
 .sidebar {
   width: 250px;
   background-color: #fff;
-  height: 100vh;
+  height: 80vh;
   padding-top: 20px;
   border-right: 1px solid #ddd;
 }
@@ -213,6 +213,24 @@ body {
   display: flex;
   gap: 20px;
   justify-content: start;
-  align-items: center;
-  max-width: 605px;
+  align-items: start;
+}
+
+.neew {
+  font-size: 16px;
+  max-width: 310px;
+}
+
+.eye {
+  max-width: 50px;
+}
+
+.vieo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 370px);
+  grid-gap: 16px;
+  height: 80vh;
+  background-color: red;
+  overflow: scroll;
+  padding: 20px;
 }/*# sourceMappingURL=style.css.map */
