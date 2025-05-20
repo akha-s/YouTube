@@ -19,6 +19,8 @@ body {
   display: flex;
   align-items: center;
   max-width: 100%;
+  justify-content: center;
+  gap: 20px;
 }
 .right {
   display: flex;
@@ -33,6 +35,7 @@ body {
 
 .logo {
   height: 24px;
+  width: 100px;
 }
 
 .search-bar {
@@ -49,6 +52,7 @@ body {
   padding: 8px 12px;
   border: none;
   outline: none;
+  width: 540px;
 }
 
 .search-bar button {
