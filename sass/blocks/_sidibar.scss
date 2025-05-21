@@ -161,7 +161,7 @@
 
 .eye {
   max-width: 50px;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 
 .vieo {
@@ -180,4 +180,13 @@
     grid-template-columns: 1fr;
     padding: 12px;
   }
+}
+
+.img-vd {
+  padding: 40px 20px;
+  background-color: red;
+}
+
+.image {
+  padding: 40px 10px;
 }
