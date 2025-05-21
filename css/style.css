@@ -230,7 +230,6 @@ body {
   grid-template-columns: repeat(auto-fill, 370px);
   grid-gap: 16px;
   height: 80vh;
-  background-color: red;
   overflow: scroll;
   padding: 20px;
 }/*# sourceMappingURL=style.css.map */
