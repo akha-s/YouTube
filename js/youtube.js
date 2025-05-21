@@ -5,8 +5,8 @@ let videoData = [
     channel: "X-Faktor O'zbekiston",
     channelPhoto:
       "https://yt3.ggpht.com/Om0mmOcWC-yPkRyAaoF00KZrnbNEQbTg-zK7Ebk62UfqjHGiY_1UtaR9ul9qfb8EyGI27bYHHh4=s68-c-k-c0x00ffffff-no-rj",
-    views: "1 млн просмотров",
-    uploaded: "1 год назад",
+    views: "1 mln",
+    uploaded: "1 yil oldin",
     duration: "9:22",
     thumbnail: "thumbnails/ruxsora.avif",
     category: "Music",

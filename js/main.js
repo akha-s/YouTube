@@ -1,5 +1,6 @@
 let videoList = document.querySelector(".vieo");
 let elBtn = document.querySelectorAll(".btn");
+let elInput = document.querySelector(".input");
 
 Array.from(elBtn).forEach((el) => {
   el.addEventListener("click", () => {
@@ -41,7 +42,7 @@ function displayVideo(arr) {
             <p class="cbs">
               ${video.channel} <i class="bi bi-check-circle-fill"></i>
             </p>
-            <p class="views">${video.views} • ${video.uploaded}</p>
+            <p class="views">${video.views} views • ${video.uploaded}</p>
           </div>
         </div>
       </li>
@@ -49,5 +50,12 @@ function displayVideo(arr) {
     );
   });
 }
+
+elInput.addEventListener("input", () => {
+  let filtered = videoData.filter((el) =>
+    el.title.toLowerCase().includes(elInput.value.toLowerCase())
+  );
+  displayVideo(filtered);
+});
 
 displayVideo(videoData);

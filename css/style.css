@@ -175,10 +175,11 @@ img {
 }
 
 .sidebar {
-  width: 250px;
+  width: 20%;
   background-color: #fff;
   height: 92vh;
   overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-width: none;
   padding-top: 20px;
   border-right: 1px solid #ddd;
@@ -217,6 +218,7 @@ img {
   cursor: pointer;
   color: #000;
   transition: background-color 0.3s;
+  border-radius: 10px;
 }
 .menu-item i {
   margin-right: 15px;
@@ -227,7 +229,6 @@ img {
 }
 .menu-item.active {
   background-color: #e5e5e5;
-  border-radius: 10px;
 }
 
 .sign__in {
