@@ -1,9 +1,36 @@
 .sidebar {
   width: 250px;
   background-color: #fff;
-  height: 80vh;
+  height: 92vh;
+  overflow-y: auto;
+  scrollbar-width: none;
   padding-top: 20px;
   border-right: 1px solid #ddd;
+  transition: width 0.3s;
+
+  @media (max-width: 1024px) {
+    width: 80px;
+
+    .menu-item span,
+    .sign__in,
+    .explore,
+    .siign-in {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    left: -100%;
+    z-index: 1000;
+    width: 250px;
+    height: 100vh;
+    transition: left 0.3s ease-in-out;
+
+    &.active {
+      left: 0;
+    }
+  }
 }
 
 .menu-item {
@@ -14,20 +41,20 @@
   cursor: pointer;
   color: #000;
   transition: background-color 0.3s;
-}
 
-.menu-item i {
-  margin-right: 15px;
-  font-size: 20px;
-}
+  i {
+    margin-right: 15px;
+    font-size: 20px;
+  }
 
-.menu-item:hover {
-  background-color: #f2f2f2;
-}
+  &:hover {
+    background-color: #f2f2f2;
+  }
 
-.menu-item.active {
-  background-color: #e5e5e5;
-  border-radius: 10px;
+  &.active {
+    background-color: #e5e5e5;
+    border-radius: 10px;
+  }
 }
 
 .sign__in {
@@ -41,8 +68,9 @@
 .explore {
   margin-left: 20px;
   margin-top: 20px;
-  font-weight: 400px;
+  font-weight: 400;
 }
+
 .siign-in {
   margin-left: 13px;
   border: 1px solid #065fd4;
@@ -60,15 +88,22 @@
 }
 
 .sidiber {
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   display: flex;
 }
 
 .btns {
-  @include d-flex(flex-start, 12px);
-  overflow-x: scroll;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 10px 20px;
   scrollbar-width: none;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 }
 
 .btn {
@@ -87,41 +122,61 @@
   border: none;
   background-color: #141313;
   color: white;
-}
-.bun:hover {
-  background-color: #9e9a9a;
+
+  &:hover {
+    background-color: #9e9a9a;
+  }
 }
 
 .buttons {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   padding: 13px 24px;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    padding: 13px;
+  }
 }
 
 .vd__info {
   display: flex;
   gap: 20px;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .neew {
   font-size: 16px;
-  max-width: 310px;
+  width: 100%;
+  word-wrap: break-word;
 }
+
 .eye {
   max-width: 50px;
 }
 
 .vieo {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 370px);
-
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 16px;
-  height: 80vh;
-
-  overflow: scroll;
   padding: 20px;
+  height: auto;
+  overflow-y: auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
 }

@@ -8,8 +8,56 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        .sorts{
+            display: flex;
+            width: 25%;
+            margin-top: 20px;
+            justify-content: space-between;
+            p{
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 20px;
+                color: $primary;
+            }
+        }
         .title-other-invite{
             margin-top: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $primary;
+        }
+        .other-invite{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .cart{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                img{
+                    border-radius: 10px;
+                    width: 90px;
+                    height: 90px;
+                }
+                .items{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 7px;
+                    .sale{
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        .line{
+            width: 100% ;
+            height: 1px;
+            background-color: $secondary;
+            margin-top: 20px;
         }
         .opisaine{
             width: 100%;
