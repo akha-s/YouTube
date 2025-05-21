@@ -338,6 +338,7 @@ img {
 
 .eye {
   max-width: 50px;
+  border-radius: 50px;
 }
 
 .vieo {
@@ -359,6 +360,27 @@ img {
     grid-template-columns: 1fr;
     padding: 12px;
   }
+}
+
+.img-vd {
+  max-width: 360px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.image {
+  position: relative;
+}
+
+.time {
+  position: absolute;
+  padding: 3px 4px;
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border-radius: 8px;
+  z-index: 1;
+  color: white;
+  right: 7px;
+  bottom: 8px;
 }
 
 .video__li {

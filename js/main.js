@@ -16,6 +16,7 @@ function displayVideo(parentEl, videos) {
       <li class="video__li">
         <div class="image">
           <img src="${video.thumbnail}" alt="${video.title}" class="img-vd" />
+          <span class="time">${video.duration}</span>
         </div>
         <!-- img -->
         <div class="vd__info">
