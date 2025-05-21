@@ -345,8 +345,9 @@ img {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 16px;
   padding: 20px;
-  height: auto;
-  overflow-y: auto;
+  height: 78.5vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 @media (max-width: 1024px) {
   .vieo {
@@ -358,4 +359,10 @@ img {
     grid-template-columns: 1fr;
     padding: 12px;
   }
+}
+
+.video__li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
