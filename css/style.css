@@ -341,6 +341,7 @@ img {
 
 .eye {
   max-width: 50px;
+  border-radius: 50px;
 }
 
 .vieo {
@@ -348,8 +349,10 @@ img {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 16px;
   padding: 20px;
-  height: auto;
-  overflow-y: auto;
+  height: 78.5vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 @media (max-width: 1024px) {
   .vieo {
@@ -363,6 +366,33 @@ img {
   }
 }
 
+.img-vd {
+  max-width: 360px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.image {
+  position: relative;
+}
+
+.time {
+  position: absolute;
+  padding: 3px 4px;
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border-radius: 8px;
+  z-index: 1;
+  color: white;
+  right: 7px;
+  bottom: 8px;
+}
+
+.video__li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .detail__Wrapper {
   padding: 24px;
   display: flex;
@@ -374,6 +404,61 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.detail__Wrapper .detail__video .all-commentary {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 20px;
+}
+.detail__Wrapper .detail__video .all-commentary .one-comentary {
+  display: flex;
+  gap: 15px;
+}
+.detail__Wrapper .detail__video .all-commentary .one-comentary img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.detail__Wrapper .detail__video .all-commentary .one-comentary .one__items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.detail__Wrapper .detail__video .all-commentary .one-comentary .one__items .text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0f0f0f;
+}
+.detail__Wrapper .detail__video .all-commentary .one-comentary .one__items .name {
+  display: flex;
+  gap: 10px;
+}
+.detail__Wrapper .detail__video .all-commentary .one-comentary .one__items .name .names {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: #0f0f0f;
+}
+.detail__Wrapper .detail__video .all-commentary .one-comentary .one__items .name .vaqtcha {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #606060;
+}
+.detail__Wrapper .detail__video .your-comented {
+  margin-top: 15px;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+.detail__Wrapper .detail__video .your-comented .comented-your__items {
+  width: 100%;
+}
+.detail__Wrapper .detail__video .your-comented .comented-your__items input {
+  width: 100%;
+  border: transparent;
 }
 .detail__Wrapper .detail__video .sorts {
   display: flex;

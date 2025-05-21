@@ -161,6 +161,7 @@
 
 .eye {
   max-width: 50px;
+  border-radius: 50px;
 }
 
 .vieo {
@@ -168,8 +169,10 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 16px;
   padding: 20px;
-  height: auto;
-  overflow-y: auto;
+  height: 78.5vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -179,4 +182,31 @@
     grid-template-columns: 1fr;
     padding: 12px;
   }
+}
+
+.img-vd {
+  max-width: 360px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.image {
+  position: relative;
+}
+
+.time {
+  position: absolute;
+  padding: 3px 4px;
+  background-color: #000000dd;
+  border-radius: 8px;
+  z-index: 1;
+  color: white;
+  right: 7px;
+  bottom: 8px;
+}
+
+.video__li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }

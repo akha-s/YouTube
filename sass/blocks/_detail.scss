@@ -8,6 +8,61 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        .all-commentary{
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            gap: 20px;
+            .one-comentary{
+                display: flex;
+                gap: 15px;
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+                .one__items{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .text{
+                        font-weight: 400;
+                        font-size: 14px;    
+                        line-height: 20px;
+                        color: $primary;
+                    }
+                    .name{
+                        display: flex;
+                        gap: 10px;
+                        .names{
+                            font-weight: 500;
+                            font-size: 13px;
+                            line-height: 20px;
+                            color: $primary;
+                        }
+                        .vaqtcha{
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: $secondary-text;
+                        }
+                    }
+                }
+            }
+        }
+        .your-comented{
+            margin-top: 15px;
+            display: flex;
+            width: 100%;
+            gap: 20px;
+            .comented-your__items{
+                width: 100%;
+                input{
+                    width: 100%;
+                    border: transparent;
+                }
+            }
+        }
         .sorts{
             display: flex;
             width: 25%;
