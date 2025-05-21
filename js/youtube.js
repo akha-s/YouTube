@@ -105,4 +105,69 @@ let videoData = [
     category: "Sport",
     src: "https://www.youtube.com/embed/XXYbVpkI-UY",
   },
+  {
+    id: 9,
+    title: "Sheriff of Oddsville | Oddbods Cartoons | Funny Cartoons For Kids",
+    channel: "Oddbods Cartoons",
+    channelPhoto:
+      "https://yt3.ggpht.com/6NeRLv3A-I9qna5Mk158cCVpqs54oIC0-2XqpKpAIVXxHyK_IcWlfwNhBP07KlCUCxHJfNTAy4Y=s68-c-k-c0x00ffffff-no-rj", // Agar siz aniq URL berishni istasangiz, bu yerga haqiqiy rasm manzili kiritiladi.
+    views: "2.1M",
+    uploaded: "4 months ago",
+    duration: "1:37:47",
+    thumbnail: "thumbnails/oddbods.avif",
+    category: "Kids",
+    src: "https://www.youtube.com/embed/Kdnri6JLJqY", // Video ID yo‘q, shuning uchun linkni to‘liq ko‘rsata olmayman.
+  },
+  { 
+    id: 10,
+    title: "18 Years Old Cristiano Ronaldo was INSANE",
+    channel: "VALENTINO PRODUCTIONS",
+    channelPhoto:
+      "https://yt3.ggpht.com/vyfJhgtTbO-NC8ymcLHCdtO7MhIIwReE2AxyP4jEljAdhh5MBOK1bQWeLheebwYW-3YttvNUrA=s68-c-k-c0x00ffffff-no-rj",
+    views: "10M",
+    uploaded: "1 yil oldin",
+    duration: "15:48",
+    thumbnail: "thumbnails/ronaldo.avif",
+    category: "Sport",
+    src: "https://www.youtube.com/embed/XXYbVpkI-UY",
+  },
+  {
+    id: 8,
+    title: "18 Years Old Cristiano Ronaldo was INSANE",
+    channel: "VALENTINO PRODUCTIONS",
+    channelPhoto:
+      "https://yt3.ggpht.com/vyfJhgtTbO-NC8ymcLHCdtO7MhIIwReE2AxyP4jEljAdhh5MBOK1bQWeLheebwYW-3YttvNUrA=s68-c-k-c0x00ffffff-no-rj",
+    views: "10M",
+    uploaded: "1 yil oldin",
+    duration: "15:48",
+    thumbnail: "thumbnails/ronaldo.avif",
+    category: "Sport",
+    src: "https://www.youtube.com/embed/XXYbVpkI-UY",
+  },
+  {
+    id: 11,
+    title: "18 Years Old Cristiano Ronaldo was INSANE",
+    channel: "VALENTINO PRODUCTIONS",
+    channelPhoto:
+      "https://yt3.ggpht.com/vyfJhgtTbO-NC8ymcLHCdtO7MhIIwReE2AxyP4jEljAdhh5MBOK1bQWeLheebwYW-3YttvNUrA=s68-c-k-c0x00ffffff-no-rj",
+    views: "10M",
+    uploaded: "1 yil oldin",
+    duration: "15:48",
+    thumbnail: "thumbnails/ronaldo.avif",
+    category: "Sport",
+    src: "https://www.youtube.com/embed/XXYbVpkI-UY",
+  },
+  {
+    id: 12,
+    title: "18 Years Old Cristiano Ronaldo was INSANE",
+    channel: "VALENTINO PRODUCTIONS",
+    channelPhoto:
+      "https://yt3.ggpht.com/vyfJhgtTbO-NC8ymcLHCdtO7MhIIwReE2AxyP4jEljAdhh5MBOK1bQWeLheebwYW-3YttvNUrA=s68-c-k-c0x00ffffff-no-rj",
+    views: "10M",
+    uploaded: "1 yil oldin",
+    duration: "15:48",
+    thumbnail: "thumbnails/ronaldo.avif",
+    category: "Sport",
+    src: "https://www.youtube.com/embed/XXYbVpkI-UY",
+  },
 ];
