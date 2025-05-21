@@ -172,6 +172,7 @@
   height: 78.5vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-width: none;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

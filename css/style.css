@@ -349,6 +349,7 @@ img {
   height: 78.5vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 @media (max-width: 1024px) {
   .vieo {
