@@ -1,16 +1,29 @@
 let videoList = document.querySelector(".vieo");
-let btns = document.querySelectorAll(".btn");
+let elBtn = document.querySelectorAll(".btn");
 
-Array.from(btns).forEach((el) => {
+Array.from(elBtn).forEach((el) => {
   el.addEventListener("click", () => {
-    Array.from(btns).forEach((btn) => btn.classList.remove("bun"));
+    Array.from(elBtn).forEach((btn) => btn.classList.remove("bun"));
 
     el.classList.add("bun");
+    let filterByType = videoData.filter((vd) => {
+      return vd.category.includes(el.textContent);
+    });
+    filterByType.sort((a, b) => a.uploaded - b.uploaded);
+
+    if (el.textContent == "ALL") {
+      console.log(el);
+      displayVideo(videoData);
+    } else {
+      displayVideo(filterByType);
+    }
   });
 });
-function displayVideo(parentEl, videos) {
-  videos.forEach((video) => {
-    parentEl.insertAdjacentHTML(
+
+function displayVideo(arr) {
+  videoList.innerHTML = "";
+  arr.forEach((video) => {
+    videoList.insertAdjacentHTML(
       "beforeend",
       `
       <li class="video__li">
@@ -37,4 +50,4 @@ function displayVideo(parentEl, videos) {
   });
 }
 
-displayVideo(videoList, videoData);
+displayVideo(videoData);

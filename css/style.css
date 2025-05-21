@@ -61,8 +61,8 @@ img {
   }
 }
 .left .logo {
-  height: 24px;
-  width: 100px;
+  max-height: 24px;
+  max-width: 100px;
 }
 @media (max-width: 480px) {
   .left .logo {
@@ -309,7 +309,6 @@ img {
   display: flex;
   flex-direction: column;
   padding: 13px 24px;
-  gap: 20px;
 }
 @media (max-width: 768px) {
   .buttons {
