@@ -399,6 +399,47 @@ img {
   justify-content: space-between;
   gap: 24px;
 }
+.detail__Wrapper .detail__other-video {
+  padding: 5px;
+}
+.detail__Wrapper .detail__other-video .other-video__wrapeer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.detail__Wrapper .detail__other-video .other-video__wrapeer .videos {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.detail__Wrapper .detail__other-video .other-video__wrapeer .videos img {
+  border-radius: 10px;
+}
+.detail__Wrapper .detail__other-video .other-video__wrapeer .videos .items {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.detail__Wrapper .detail__other-video .other-video__wrapeer .videos .items .names {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0f0f0f;
+}
+.detail__Wrapper .detail__other-video .other-video__wrapeer .videos .items .chanel-name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #606060;
+  gap: 10px;
+  display: flex;
+}
+.detail__Wrapper .detail__other-video .other-video__wrapeer .videos .items .vaqtcha {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #606060;
+}
 .detail__Wrapper .detail__video {
   width: 70%;
   display: flex;

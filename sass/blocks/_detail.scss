@@ -3,6 +3,47 @@
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    .detail__other-video{
+        padding: 5px;
+        .other-video__wrapeer{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .videos{
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                img{
+                    border-radius: 10px;
+                }
+                .items{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 7px;
+                    .names{
+                        font-weight: 500;
+                        font-size: 14px;    
+                        line-height: 20px;
+                        color: $primary;
+                    }
+                    .chanel-name{
+                        font-weight: 400;
+                        font-size: 12px;    
+                        line-height: 20px;
+                        color: $secondary-text;
+                        gap: 10px;
+                        display: flex;
+                    }
+                    .vaqtcha{
+                        font-weight: 400;
+                        font-size: 12px;    
+                        line-height: 20px;
+                        color: $secondary-text;
+                    }
+                }
+            }
+        }
+    }
     .detail__video{
         width: 70%;
         display: flex;
