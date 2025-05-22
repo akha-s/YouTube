@@ -39,7 +39,7 @@ detailVideo.insertAdjacentHTML(
         </div>
         <div class="channel-right">
           <button class="like-dislike">
-            <i class="bi bi-hand-thumbs-up"></i>205K
+            <i class="bi bi-hand-thumbs-up"></i>${findVideo.like}K
             <div class="chiziq"></div>
             <i class="bi bi-hand-thumbs-down"></i>
           </button>
@@ -73,7 +73,7 @@ videoData.forEach((el) => {
     "beforeend",
     `
     <li class="videos">
-      <img src="${el.thumbnail}" alt="" />
+      <img  src="${el.thumbnail}" alt="" />
       <div class="items">
         <div class="names">
         ${el.title}
