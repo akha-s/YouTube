@@ -72,7 +72,7 @@ videoData.forEach((el) => {
   otherVideos.insertAdjacentHTML(
     "beforeend",
     `
-    <li class="videos">
+    <li class="videos" data-id="${el.id}">
       <img src="${el.thumbnail}" alt="" />
       <div class="items">
         <div class="names">
@@ -86,4 +86,11 @@ videoData.forEach((el) => {
     </li>
     `
   );
+});
+
+otherVideos.addEventListener("click", (evt) => {
+  if (evt.target.closest(".videos")) {
+    let elId = evt.target.closest(".videos").dataset.id;
+    window.location.href = `./detail.html?id=${elId}`;
+  }
 });
