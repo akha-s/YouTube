@@ -1,0 +1,291 @@
+.detail__Wrapper {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  .detail__other-video {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .videos {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      img {
+        border-radius: 10px;
+        max-width: 50%;
+      }
+      .items {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        .names {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          color: $primary;
+        }
+        .chanel-name {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 20px;
+          color: $secondary-text;
+          gap: 10px;
+          display: flex;
+        }
+        .vaqtcha {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 20px;
+          color: $secondary-text;
+        }
+      }
+    }
+  }
+
+  .detail__video {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .video {
+      .org-vd {
+        border-radius: 12px;
+        width: 100%;
+        height: 450px;
+      }
+    }
+    .all-commentary {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      gap: 20px;
+      .one-comentary {
+        display: flex;
+        gap: 15px;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+        .one__items {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $primary;
+          }
+          .name {
+            display: flex;
+            gap: 10px;
+            .names {
+              font-weight: 500;
+              font-size: 13px;
+              line-height: 20px;
+              color: $primary;
+            }
+            .vaqtcha {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 20px;
+              color: $secondary-text;
+            }
+          }
+        }
+      }
+    }
+    .your-comented {
+      margin-top: 15px;
+      display: flex;
+      width: 100%;
+      gap: 20px;
+      .comented-your__items {
+        width: 100%;
+        input {
+          width: 100%;
+          border: transparent;
+        }
+      }
+    }
+    .sorts {
+      display: flex;
+      width: 25%;
+      margin-top: 20px;
+      justify-content: space-between;
+      p {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+        color: $primary;
+      }
+    }
+    .title-other-invite {
+      margin-top: 10px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: $primary;
+    }
+    .other-invite {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .cart {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        img {
+          border-radius: 10px;
+          width: 90px;
+          height: 90px;
+        }
+        .items {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          .sale {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $primary;
+          }
+        }
+      }
+    }
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: $secondary;
+      margin-top: 20px;
+    }
+    .opisaine {
+      width: 100%;
+      margin-top: 20px;
+      .views {
+        width: 100%;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px;
+        background-color: #0000000d;
+        .view {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          color: $primary;
+        }
+        span {
+          display: flex;
+          gap: 10px;
+          .about-opisanie,
+          .link {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $primary;
+          }
+          .more {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $primary;
+          }
+        }
+      }
+    }
+    .video {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .title {
+      width: 100%;
+      .video-name {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+        color: $primary;
+        margin-top: 10px;
+      }
+      .about__Wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .channel-right {
+          display: flex;
+          gap: 10px;
+          .like-dislike {
+            display: flex;
+            gap: 7px;
+            .chiziq {
+              width: 1px;
+              height: 100%;
+              background-color: $primary;
+            }
+          }
+        }
+        .channel-left {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          .channel-img img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          }
+          .channel {
+            display: flex;
+            flex-direction: column;
+            .channel-name {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 22px;
+              color: $primary;
+              gap: 10px;
+              display: flex;
+            }
+            .subscriber {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 18px;
+              color: $secondary-text;
+              gap: 10px;
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .detail__other-video {
+    width: 30%;
+  }
+}
+
+.join-channel {
+  @include join-button;
+}
+.like-dislike {
+  @include join-button;
+}
+.share {
+  @include join-button;
+}
+.dot {
+  @include join-button;
+}
+.save {
+  @include join-button;
+}
+.subscribe {
+  @include join-button($primary, $bg-color);
+}

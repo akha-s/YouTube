@@ -11,3 +11,17 @@
   color: $color;
   font-weight: $weight;
 }
+@mixin join-button ($bg: $secondary,$color: $primary) {
+  background-color: $bg; 
+  color: $color;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  height: 36px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}

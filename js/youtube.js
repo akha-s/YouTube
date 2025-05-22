@@ -5,12 +5,12 @@ let videoData = [
     channel: "X-Faktor O'zbekiston",
     channelPhoto:
       "https://yt3.ggpht.com/Om0mmOcWC-yPkRyAaoF00KZrnbNEQbTg-zK7Ebk62UfqjHGiY_1UtaR9ul9qfb8EyGI27bYHHh4=s68-c-k-c0x00ffffff-no-rj",
-    views: "1 mln",
+    views: "1M",
     uploaded: "1 yil oldin",
     duration: "9:22",
     thumbnail: "thumbnails/ruxsora.avif",
     category: "Music",
-    videoSrc: "https://www.youtube.com/embed/8RBm0qKOmHY",
+    src: "https://www.youtube.com/embed/8RBm0qKOmHY",
   },
   {
     id: 2,

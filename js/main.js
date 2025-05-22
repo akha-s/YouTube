@@ -27,7 +27,7 @@ function displayVideo(arr) {
     videoList.insertAdjacentHTML(
       "beforeend",
       `
-      <li class="video__li">
+      <li class="video__li" data-id=${video.id}>
         <div class="image">
           <img src="${video.thumbnail}" alt="${video.title}" class="img-vd" />
           <span class="time">${video.duration}</span>
@@ -59,3 +59,10 @@ elInput.addEventListener("input", () => {
 });
 
 displayVideo(videoData);
+
+videoList.addEventListener("click", (evt) => {
+  if (evt.target.closest(".video__li")) {
+    let elId = evt.target.closest(".video__li").dataset.id;
+    window.location.href = `./detail.html?id=${elId}`;
+  }
+});
