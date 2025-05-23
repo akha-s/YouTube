@@ -28,22 +28,19 @@ img {
 }
 
 .container {
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .header {
-  position: fixed;
-  top: 0;
   background-color: white;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
   border-bottom: 1px solid #ddd;
   flex-wrap: wrap;
-  z-index: 1000;
 }
 @media (max-width: 768px) {
   .header {
@@ -168,7 +165,6 @@ img {
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
-  margin-right: 20px;
 }
 @media (max-width: 480px) {
   .right .sign-in {
@@ -183,8 +179,8 @@ img {
 }
 
 .sidebar {
-  min-width: 250px;
-  height: 92vh;
+  height: 90vh;
+  width: 12%;
   background: white;
   z-index: 999;
   overflow-y: auto;
@@ -242,7 +238,7 @@ img {
 .sign__in {
   font-weight: 400;
   font-size: 18px;
-  width: 210px;
+  max-width: 210px;
   margin-top: 13px;
   margin-left: 20px;
 }
@@ -254,6 +250,8 @@ img {
 }
 
 .siign-in {
+  max-width: -moz-max-content;
+  max-width: max-content;
   margin-left: 13px;
   border: 1px solid #065fd4;
   color: #065fd4;
@@ -278,11 +276,11 @@ img {
 }
 
 .btns {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   gap: 12px;
-  overflow-x: auto;
+  overflow-x: scroll;
   padding: 10px 20px;
   scrollbar-width: none;
 }
@@ -317,6 +315,7 @@ img {
 }
 
 .buttons {
+  width: 80%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -356,7 +355,8 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   padding: 20px;
-  height: 84vh;
+  width: 100%;
+  height: 82vh;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -382,7 +382,6 @@ img {
   max-width: 100%;
   width: auto;
   height: auto;
-  min-width: 200px;
   margin: 0 auto;
   border-radius: 12px;
 }
@@ -814,4 +813,42 @@ img {
   .save {
     display: none;
   }
+}
+.shorts {
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: end;
+  display: flex;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.short__btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.like {
+  border-radius: 50px;
+  padding: 13px 13px;
+  border: none;
+}
+
+.iml {
+  margin-left: 4px;
+}
+
+.bio {
+  font-size: 20px;
+}
+
+.shorts__img {
+  border-radius: 10px;
+  min-width: 360px;
+}
+
+.inf {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

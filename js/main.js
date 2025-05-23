@@ -3,8 +3,11 @@ let elBtn = document.querySelectorAll(".btn");
 let elInput = document.querySelector(".input");
 let elList = document.querySelector(".bi-list");
 let sidebar = document.querySelector(".sidebar");
+let mainWrap = document.querySelector(".buttons");
 let elMic = document.querySelector(".bi-mic");
 let record = new webkitSpeechRecognition();
+mainWrap.style.width = "80%";
+
 record.lang = "uz-UZ";
 
 Array.from(elBtn).forEach((el) => {
@@ -89,4 +92,5 @@ let imgs = document.querySelectorAll(".img-vd");
 elList.onclick = () => {
   sidebar.classList.toggle("nonne");
   Array.from(imgs).forEach((img) => img.classList.toggle("img-need"));
+  mainWrap.style.width = "92%";
 };

@@ -77,7 +77,7 @@ let videoData = [
     uploaded: "3 kun oldin",
     duration: "16:24",
     thumbnail: "thumbnails/minecraft.avif",
-    category: "O‘yinlar",
+    category: "O'yinlar",
     src: "https://www.youtube.com/embed/CgZ5ukSgubc",
   },
   {
@@ -128,5 +128,126 @@ let videoData = [
     thumbnail: "thumbnails/ronaldo.avif",
     category: "Sport",
     src: "https://www.youtube.com/embed/XXYbVpkI-UY",
+  },
+  {
+    id: 9,
+    title: "Sheriff of Oddsville | Oddbods Cartoons | Funny Cartoons For Kids",
+    channel: "Oddbods Cartoons",
+    channelPhoto:
+      "https://yt3.ggpht.com/6NeRLv3A-I9qna5Mk158cCVpqs54oIC0-2XqpKpAIVXxHyK_IcWlfwNhBP07KlCUCxHJfNTAy4Y=s68-c-k-c0x00ffffff-no-rj", // Agar siz aniq URL berishni istasangiz, bu yerga haqiqiy rasm manzili kiritiladi.
+    views: "2.1M",
+    uploaded: "4 months ago",
+    duration: "1:37:47",
+    thumbnail: "thumbnails/oddbods.avif",
+    category: "Kids",
+    src: "https://www.youtube.com/embed/Kdnri6JLJqY", // Video ID yo‘q, shuning uchun linkni to‘liq ko‘rsata olmayman.
+  },
+
+  {
+    id: 10,
+    title:
+      "BUNAQA EL CLASICO TARIXDA BÒLMAGAN! BARCA vs REAL 3-QISM UNWANTED BOYS!",
+    channel: " ABDUJABBOROV__7 -  UNWANTED BOYS",
+    channelPhoto:
+      "https://yt3.ggpht.com/1VddnzudOBTDvWLjO-_nOJ8pkNcA1wm6-46uBrj_7thtGWNQzBHxCC_b8AhIpI2wtlwUR8JZOg=s88-c-k-c0x00ffffff-no-rj",
+    views: "405K",
+    uploaded: " 8 days ago",
+    duration: "23:425",
+    thumbnail: "thumbnails/sm.avif",
+    category: "Sport",
+    src: "https://www.youtube.com/embed/xtZOYN61Y68",
+  },
+  {
+    id: 11,
+    title: "REAL MADRID - BARCELONA! El Clasico ABDUJABBOROV__7",
+    channel: " ABDUJABBOROV__7 -  UNWANTED BOYS",
+    channelPhoto:
+      "https://yt3.ggpht.com/1VddnzudOBTDvWLjO-_nOJ8pkNcA1wm6-46uBrj_7thtGWNQzBHxCC_b8AhIpI2wtlwUR8JZOg=s88-c-k-c0x00ffffff-no-rj",
+    views: "1.56M",
+    uploaded: " 2 years ago ",
+    duration: "7:44",
+    thumbnail: "thumbnails/el.avif",
+    category: "Sport",
+    src: "https://www.youtube.com/embed/ZPPqsZgoYHo",
+  },
+  {
+    id: 12,
+    title:
+      "Box Full of Model Cars -Mazda Mx5, Koenigesgg Jesko, Lamborghini Scv12, Byd Yang Wang U8, Toyota Car",
+    channel: "  Desiliun Diecast",
+    channelPhoto:
+      "https://yt3.ggpht.com/EhzbF7BD4m5cezu9nb8CQuK6GB1nagQ3JfU7Vuked7DVa_fz4C4cuJNfuXCM0mTvYyhWBp7l9w=s88-c-k-c0x00ffffff-no-rj",
+    views: "6",
+    uploaded: " 86 minutes ago ",
+    duration: "1:24:47",
+    thumbnail: "thumbnails/mm.avif",
+    category: "Sport",
+    src: "https://www.youtube.com/embed/tvX1BgQh_sk",
+  },
+  {
+    id: 13,
+    title:
+      "DLS 25 | How to Transfer Your Account On DLS25| Old Device to New Device",
+    channel: "  GAMEFANS",
+    channelPhoto:
+      "https://yt3.ggpht.com/_mvO5sG4QTSek0TI1hBIygajwyiYyfQK_e381C7trqeeMxFsjDZT2u9Nd2xHaYXCcn0f5Sjq5g=s88-c-k-c0x00ffffff-no-rj",
+    views: "6",
+    uploaded: "4 months ago",
+    duration: "10:49",
+    thumbnail: "thumbnails/olo.avif",
+    category: "O'yinlar",
+    src: "https://www.youtube.com/embed/66AMwGmBdn8",
+  },
+  {
+    id: 14,
+    title: "O'gil bolada TESTASTEERON bo'ladi 😄😄😄 #qodirtolipov",
+    channel: "  Kadir Tolipov",
+    channelPhoto:
+      "https://yt3.ggpht.com/ExnW-WpoEa9dVTo8n0fQRE2jjwjraFEdcGG9F1D6Mm3kiC1oYVOOZ0Jyes7Chj7RC73Vmu8zgQ=s88-c-k-c0x00ffffff-no-rj",
+    views: "1M6",
+    uploaded: "2 weeks  ago",
+    duration: "10:20",
+    thumbnail: "thumbnails/ky.avif",
+    category: "Comedy",
+    src: "https://www.youtube.com/embed/nENUBulDXKA",
+  },
+  {
+    id: 15,
+    title: "QODIR TOLIPOV / КОДИР ТОЛИПОВ / YANGI INSTAGRAM VAYNLAR",
+    channel: " ARTIKSTUDIO ",
+    channelPhoto:
+      "https://yt3.ggpht.com/-joBKxHF7deRBmBVmR14x3OSA8IdrW0dMn6oDo2XRrehPW3Crd64vsNm8CE8Q0BgE5YffiBr=s88-c-k-c0x00ffffff-no-rj",
+    views: "933K",
+    uploaded: "5 months  ago",
+    duration: "8:54",
+    thumbnail: "thumbnails/oop.avif",
+    category: "Comedy",
+    src: "https://www.youtube.com/embed/7C4OCxvroU8",
+  },
+  {
+    id: 16,
+    title: "Qodir Tolipov yangi vine #trend #kulamiz",
+    channel: "Kadir Tolipov",
+    channelPhoto:
+      "https://yt3.ggpht.com/ExnW-WpoEa9dVTo8n0fQRE2jjwjraFEdcGG9F1D6Mm3kiC1oYVOOZ0Jyes7Chj7RC73Vmu8zgQ=s88-c-k-c0x00ffffff-no-rj",
+    views: "1.5K",
+    uploaded: "2 days ago",
+    duration: "3:45",
+    thumbnail: "https://i.ytimg.com/vi/f1CaXzETGXo/hqdefault.jpg",
+    category: "Comedy",
+    src: "https://www.youtube.com/embed/f1CaXzETGXo",
+  },
+  {
+    id: 17,
+    title: "O'zbekistondagi Eng Qimmat Aktyorlar",
+    channel: "Yulduzlar Hayati",
+    channelPhoto:
+      "https://yt3.ggpht.com/ytc/AIdro_l_y1DYnA1z55t7Y-azFOJsW9Y7IktMYJt_SRz_AWxU0Rw=s88-c-k-c0x00ffffff-no-rj",
+    views: "698K ",
+    uploaded: "3 years ago",
+    duration: "2:52",
+    thumbnail: "thumbnails/pp.avif",
+    category: "Comedy",
+    src: "https://www.youtube.com/embed/pmRCR6PbXnk",
   },
 ];
