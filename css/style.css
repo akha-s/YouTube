@@ -498,6 +498,10 @@ img {
   width: 100%;
   gap: 20px;
 }
+.detail__Wrapper .detail__video .your-comented img {
+  width: 40px;
+  height: 40px;
+}
 .detail__Wrapper .detail__video .your-comented .comented-your__items {
   width: 100%;
 }
@@ -523,6 +527,7 @@ img {
   font-size: 14px;
   line-height: 20px;
   color: #0f0f0f;
+  width: 100%;
 }
 .detail__Wrapper .detail__video .other-invite {
   width: 100%;

@@ -104,6 +104,10 @@
       display: flex;
       width: 100%;
       gap: 20px;
+      img{
+        width: 40px;
+        height: 40px;
+      }
       .comented-your__items {
         width: 100%;
         input {
@@ -130,6 +134,7 @@
       font-size: 14px;
       line-height: 20px;
       color: $primary;
+      width: 100%;
     }
     .other-invite {
       width: 100%;
@@ -288,4 +293,6 @@
 }
 .subscribe {
   @include join-button($primary, $bg-color);
+}
+.none{
 }

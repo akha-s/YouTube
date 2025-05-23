@@ -2,6 +2,48 @@ let params = new URLSearchParams(window.location.search);
 let detailVideo = document.querySelector(".detail__video");
 let otherVideos = document.querySelector(".detail__other-video");
 let searchId = params.get("id");
+let formComment = document.querySelector(".form")
+let inputComment = document.querySelector("#input")
+let inputName = document.querySelector("#name")
+let txt = document.querySelector(".all-commentary")
+
+let users = []
+formComment.addEventListener("submit", (e)=>{
+    e.preventDefault();
+
+    let userComent ={
+       comentaryy:inputComment.value,
+       namesss:inputName,
+    }
+
+    users.push(userComent)
+    localStorage.setItem( "user", JSON.stringify(users));
+    comment(JSON.parse(localStorage.getItem("user")));
+})
+
+function comment(arr){
+  txt.innerHTML = ""
+  arr.forEach((el)=>{
+    txt.insertAdjacentHTML(
+      'beforeend',
+      `
+      <div class="one-comentary">
+                  <img src="./assets/your avatar.png" alt="" />
+                  <div class="one__items">
+                    <div class="name">
+                      <p class="name">@${el.namesss}</p>
+                      <p class="vaqtcha">now</p>
+                    </div>
+                    <div class="text">
+                      ${el.comentaryy}
+                    </div>
+                  </div>
+                </div>`
+    )
+  })
+}
+comment(JSON.parse(localStorage.getItem("user","usern ")))
+
 
 let findVideo = videoData.find((el) => el.id == searchId);
 detailVideo.insertAdjacentHTML(
