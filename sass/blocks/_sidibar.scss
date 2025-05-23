@@ -1,8 +1,9 @@
 .sidebar {
-  width: 250px;
+  width: 20%;
   background-color: #fff;
   height: 92vh;
   overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-width: none;
   padding-top: 20px;
   border-right: 1px solid #ddd;
@@ -41,6 +42,7 @@
   cursor: pointer;
   color: #000;
   transition: background-color 0.3s;
+  border-radius: 10px;
 
   i {
     margin-right: 15px;
@@ -53,7 +55,6 @@
 
   &.active {
     background-color: #e5e5e5;
-    border-radius: 10px;
   }
 }
 
@@ -134,7 +135,6 @@
   display: flex;
   flex-direction: column;
   padding: 13px 24px;
-  gap: 20px;
 
   @media (max-width: 768px) {
     padding: 13px;

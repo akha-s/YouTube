@@ -1,19 +1,33 @@
 let videoList = document.querySelector(".vieo");
-let btns = document.querySelectorAll(".btn");
+let elBtn = document.querySelectorAll(".btn");
+let elInput = document.querySelector(".input");
 
-Array.from(btns).forEach((el) => {
+Array.from(elBtn).forEach((el) => {
   el.addEventListener("click", () => {
-    Array.from(btns).forEach((btn) => btn.classList.remove("bun"));
+    Array.from(elBtn).forEach((btn) => btn.classList.remove("bun"));
 
     el.classList.add("bun");
+    let filterByType = videoData.filter((vd) => {
+      return vd.category.includes(el.textContent);
+    });
+    filterByType.sort((a, b) => a.uploaded - b.uploaded);
+
+    if (el.textContent == "ALL") {
+      console.log(el);
+      displayVideo(videoData);
+    } else {
+      displayVideo(filterByType);
+    }
   });
 });
-function displayVideo(parentEl, videos) {
-  videos.forEach((video) => {
-    parentEl.insertAdjacentHTML(
+
+function displayVideo(arr) {
+  videoList.innerHTML = "";
+  arr.forEach((video) => {
+    videoList.insertAdjacentHTML(
       "beforeend",
       `
-      <li class="video__li">
+      <li class="video__li" data-id=${video.id}>
         <div class="image">
           <img src="${video.thumbnail}" alt="${video.title}" class="img-vd" />
           <span class="time">${video.duration}</span>
@@ -28,7 +42,7 @@ function displayVideo(parentEl, videos) {
             <p class="cbs">
               ${video.channel} <i class="bi bi-check-circle-fill"></i>
             </p>
-            <p class="views">${video.views} • ${video.uploaded}</p>
+            <p class="views">${video.views} views • ${video.uploaded}</p>
           </div>
         </div>
       </li>
@@ -37,4 +51,18 @@ function displayVideo(parentEl, videos) {
   });
 }
 
-displayVideo(videoList, videoData);
+elInput.addEventListener("input", () => {
+  let filtered = videoData.filter((el) =>
+    el.title.toLowerCase().includes(elInput.value.toLowerCase())
+  );
+  displayVideo(filtered);
+});
+
+displayVideo(videoData);
+
+videoList.addEventListener("click", (evt) => {
+  if (evt.target.closest(".video__li")) {
+    let elId = evt.target.closest(".video__li").dataset.id;
+    window.location.href = `./detail.html?id=${elId}`;
+  }
+});

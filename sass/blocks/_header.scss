@@ -26,8 +26,8 @@
   }
 
   .logo {
-    height: 24px;
-    width: 100px;
+    max-height: 24px;
+    max-width: 100px;
 
     @media (max-width: 480px) {
       width: 80px;
@@ -62,12 +62,14 @@
   width: 100%;
   max-width: 500px;
 
-  input {
-    flex: 1;
-    padding: 8px 12px;
-    border: none;
-    outline: none;
-  }
+ input {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  max-width: 540px;
+  width: 100%;
+}
 
   button {
     background: #f8f8f8;
@@ -88,7 +90,7 @@
   }
 
   @media (max-width: 480px) {
-    display: none; 
+    display: none;
   }
 }
 
