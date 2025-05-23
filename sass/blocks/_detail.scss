@@ -1,4 +1,7 @@
 .detail__Wrapper {
+  height: 94vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
   padding: 24px;
   display: flex;
   justify-content: space-between;

@@ -28,7 +28,6 @@ img {
 }
 
 .container {
-  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -37,7 +36,7 @@ img {
   position: fixed;
   top: 0;
   background-color: white;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -169,6 +168,7 @@ img {
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
+  margin-right: 20px;
 }
 @media (max-width: 480px) {
   .right .sign-in {
@@ -273,10 +273,12 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
+  width: 100vw;
   height: 100%;
 }
 
 .btns {
+  width: 100vw;
   display: flex;
   justify-content: flex-start;
   gap: 12px;
@@ -295,6 +297,7 @@ img {
   min-width: max-content;
   padding: 10px 13px;
   border-radius: 10px;
+  overflow-y: auto;
   border: none;
   background-color: #a9a6a6;
   color: rgb(47, 47, 47);
@@ -314,10 +317,9 @@ img {
 }
 
 .buttons {
-  width: 100%;
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 @media (max-width: 768px) {
   .buttons {
@@ -354,7 +356,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   padding: 20px;
-  height: 78.5vh;
+  height: 84vh;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -418,6 +420,9 @@ img {
   }
 }
 .detail__Wrapper {
+  height: 94vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
   padding: 24px;
   display: flex;
   justify-content: space-between;

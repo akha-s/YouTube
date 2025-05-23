@@ -3,6 +3,9 @@ let elBtn = document.querySelectorAll(".btn");
 let elInput = document.querySelector(".input");
 let elList = document.querySelector(".bi-list");
 let sidebar = document.querySelector(".sidebar");
+let elMic = document.querySelector(".bi-mic");
+let record = new webkitSpeechRecognition();
+record.lang = "uz-UZ";
 
 Array.from(elBtn).forEach((el) => {
   el.addEventListener("click", () => {
@@ -57,6 +60,20 @@ elInput.addEventListener("input", () => {
   );
   displayVideo(filtered);
 });
+
+elMic.addEventListener("click", () => {
+  record.start();
+});
+
+record.onend = () => {
+  console.log("--- END ---");
+};
+
+record.onresult = (evt) => {
+  let words = evt.results[0][0].transcript;
+  console.log(words);
+  elInput.value = words;
+};
 
 displayVideo(videoData);
 
