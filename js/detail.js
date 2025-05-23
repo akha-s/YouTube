@@ -1,7 +1,33 @@
 let params = new URLSearchParams(window.location.search);
 let detailVideo = document.querySelector(".detail__video");
 let otherVideos = document.querySelector(".detail__other-video");
+let sidebar = document.querySelector(".sidebar");
+let elList = document.querySelector(".bi-list");
+let elInput = document.querySelector(".input");
+let elBody = document.querySelector("body");
 let searchId = params.get("id");
+
+elList.onclick = () => {
+  sidebar.classList.toggle("nonne");
+  if (window.onclick === sidebar) {
+    sidebar.style.display = "none";
+  }
+};
+
+elInput.addEventListener("search", () => {
+  window.location.href = "http://127.0.0.1:8888/main.html";
+  let filtered = videoData.filter((el) =>
+    el.title.toLowerCase().includes(elInput.value.toLowerCase())
+  );
+  displayVideo(filtered);
+});
+
+function formatNumber(n) {
+  if (n >= 1_000_000)
+    return (n / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M";
+  if (n >= 1_000) return (n / 1_000).toFixed(1).replace(/\.0$/, "") + "K";
+  return n.toString();
+}
 
 let findVideo = videoData.find((el) => el.id == searchId);
 detailVideo.insertAdjacentHTML(
@@ -32,16 +58,20 @@ detailVideo.insertAdjacentHTML(
             <span class="channel-name"
               >${findVideo.channel}<i class="bi bi-check-circle-fill"></i
             ></span>
-            <span class="subscriber">16.7M subscribers</span>
+            <span class="subscriber">${formatNumber(
+              findVideo.subscribers
+            )} subscribers</span>
           </div>
           <button class="join-channel">join</button>
           <button class="subscribe">Subscribe</button>
         </div>
         <div class="channel-right">
           <button class="like-dislike">
-            <i class="bi bi-hand-thumbs-up"></i>205K
+            <i class="bi bi-hand-thumbs-up"></i>${formatNumber(findVideo.likes)}
             <div class="chiziq"></div>
-            <i class="bi bi-hand-thumbs-down"></i>
+            <i class="bi bi-hand-thumbs-down"></i>${formatNumber(
+              findVideo.dislikes
+            )}
           </button>
           <button class="share">
             <i class="bi bi-share"></i>Share
@@ -56,15 +86,33 @@ detailVideo.insertAdjacentHTML(
       <div class="views">
         <p class="view">${findVideo.views} views ${findVideo.uploaded}</p>
         <p class="about-opisanie">${findVideo.title}</p>
-        <br />
-        <span
-        ><p class="link">MKBHD Merch: http://shop.MKBHD.com</p>
-        <p class="more">Show more</p></span
-        >
       </div>
     </div>
     `
 );
+
+let likeDislike = document.querySelector(".like-dislike");
+
+likeDislike.addEventListener("click", (evt) => {
+  if (evt.target.matches(".bi-hand-thumbs-up")) {
+    likeDislike.innerHTML = `    
+      <i class="bi bi-hand-thumbs-up-fill"></i>${formatNumber(
+        findVideo.likes + 1
+      )} 
+      <div class="chiziq"></div>
+      <i class="bi bi-hand-thumbs-down"></i>${formatNumber(findVideo.dislikes)}
+    `;
+  }
+  if (evt.target.matches(".bi-hand-thumbs-down")) {
+    likeDislike.innerHTML = `    
+      <i class="bi bi-hand-thumbs-up"></i>${formatNumber(findVideo.likes)}
+      <div class="chiziq"></div>
+      <i class="bi bi-hand-thumbs-down-fill"></i>${formatNumber(
+        findVideo.dislikes + 1
+      )}
+    `;
+  }
+});
 
 videoData.forEach((el) => {
   if (el.id == searchId) return;

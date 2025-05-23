@@ -1,6 +1,8 @@
 let videoList = document.querySelector(".vieo");
 let elBtn = document.querySelectorAll(".btn");
 let elInput = document.querySelector(".input");
+let elList = document.querySelector(".bi-list");
+let sidebar = document.querySelector(".sidebar");
 
 Array.from(elBtn).forEach((el) => {
   el.addEventListener("click", () => {
@@ -10,7 +12,6 @@ Array.from(elBtn).forEach((el) => {
     let filterByType = videoData.filter((vd) => {
       return vd.category.includes(el.textContent);
     });
-    filterByType.sort((a, b) => a.uploaded - b.uploaded);
 
     if (el.textContent == "ALL") {
       console.log(el);
@@ -28,11 +29,10 @@ function displayVideo(arr) {
       "beforeend",
       `
       <li class="video__li" data-id=${video.id}>
-        <div class="image">
-          <img src="${video.thumbnail}" alt="${video.title}" class="img-vd" />
-          <span class="time">${video.duration}</span>
+      <div class="image">
+        <img src="${video.thumbnail}" alt="${video.title}" class="img-vd" />
+        <span class="time">${video.duration}</span>
         </div>
-        <!-- img -->
         <div class="vd__info">
           <img class="eye" src="${video.channelPhoto}" alt="${video.channel}" />
           <div class="vd__box">
@@ -66,3 +66,10 @@ videoList.addEventListener("click", (evt) => {
     window.location.href = `./detail.html?id=${elId}`;
   }
 });
+
+let imgs = document.querySelectorAll(".img-vd");
+
+elList.onclick = () => {
+  sidebar.classList.toggle("nonne");
+  Array.from(imgs).forEach((img) => img.classList.toggle("img-need"));
+};

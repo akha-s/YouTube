@@ -289,3 +289,8 @@
 .subscribe {
   @include join-button($primary, $bg-color);
 }
+
+.for-detail {
+  position: fixed;
+  top: 50px;
+}
