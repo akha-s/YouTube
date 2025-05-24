@@ -14,4 +14,4 @@ function createBtn(arr) {
   });
 }
 
-console.log(createBtn(types));
+createBtn(types);

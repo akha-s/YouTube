@@ -51,69 +51,77 @@
       </div>
     </header>
     <main>
-      <section class="section__one">
-        <div class="container">
-          <div class="sidiber">
-            <div class="sidebar">
-              <div class="menu-item"><i class="bi bi-house-fill"></i> Home</div>
-              <div class="menu-item active">
-                <i class="bi bi-lightning-fill"></i> Shorts
-              </div>
-              <div class="menu-item">
-                <i class="bi bi-collection-play"></i> Subscriptions
-              </div>
-              <hr />
-              <div class="menu-item">
-                <i class="bi bi-play-btn"></i> Library
-              </div>
-              <div class="menu-item">
-                <i class="bi bi-arrow-counterclockwise"></i> History
-              </div>
-
-              <hr />
-
-              <h1 class="sign__in">
-                Sign in to like videos, comment, and subscribe.
-              </h1>
-              <button class="siign-in">
-                <i class="fas fa-user-circle"></i> Sign in
-              </button>
-
-              <hr class="m" />
-
-              <h1 class="explore">Explore</h1>
-              <div class="menu-item"><i class="bi bi-fire"></i> Trending</div>
-              <div class="menu-item"><i class="bi bi-bag"></i> Shopping</div>
-              <div class="menu-item">
-                <i class="bi bi-music-note-beamed"></i> Music
-              </div>
-              <div class="menu-item">
-                <i class="bi bi-film"></i> Movies & TV
-              </div>
-              <div class="menu-item"><i class="bi bi-broadcast"></i> Live</div>
-              <div class="menu-item">
-                <i class="bi bi-controller"></i> Gaming
-              </div>
-              <div class="menu-item"><i class="bi bi-newspaper"></i> News</div>
-              <div class="menu-item"><i class="bi bi-trophy"></i> Sports</div>
-              <div class="menu-item">
-                <i class="bi bi-lightbulb"></i> Learning
-              </div>
-              <div class="menu-item">
-                <i class="bi bi-person"></i> Fashion & Beauty
-              </div>
-              <div class="menu-item"><i class="bi bi-mic"></i> Podcasts</div>
+      <div class="container">
+        <div class="shorts__wrapper">
+          <div class="sidebar" style="height: 92vh">
+            <div class="menu-item home">
+              <i class="bi bi-house-fill"></i> Home
             </div>
+            <div class="menu-item shorts-li active">
+              <i class="bi bi-lightning-fill"></i> Shorts
+            </div>
+            <div class="menu-item subscription">
+              <i class="bi bi-collection-play"></i> Subscriptions
+            </div>
+            <hr />
+            <div class="menu-item library">
+              <i class="bi bi-play-btn"></i> Library
+            </div>
+            <div class="menu-item history">
+              <i class="bi bi-arrow-counterclockwise"></i> History
+            </div>
+
+            <hr />
+
+            <h1 class="sign__in">
+              Sign in to like videos, comment, and subscribe.
+            </h1>
+            <button class="siign-in">
+              <i class="fas fa-user-circle"></i> Sign in
+            </button>
+
+            <hr class="m" />
+
+            <h1 class="explore">Explore</h1>
+            <div class="menu-item"><i class="bi bi-fire"></i> Trending</div>
+            <div class="menu-item"><i class="bi bi-bag"></i> Shopping</div>
+            <div class="menu-item">
+              <i class="bi bi-music-note-beamed"></i> Music
+            </div>
+            <div class="menu-item"><i class="bi bi-film"></i> Movies & TV</div>
+            <div class="menu-item"><i class="bi bi-broadcast"></i> Live</div>
+            <div class="menu-item"><i class="bi bi-controller"></i> Gaming</div>
+            <div class="menu-item"><i class="bi bi-newspaper"></i> News</div>
+            <div class="menu-item"><i class="bi bi-trophy"></i> Sports</div>
+            <div class="menu-item">
+              <i class="bi bi-lightbulb"></i> Learning
+            </div>
+            <div class="menu-item">
+              <i class="bi bi-person"></i> Fashion & Beauty
+            </div>
+            <div class="menu-item"><i class="bi bi-mic"></i> Podcasts</div>
+          </div>
+          <div class="shorts__list">
             <div class="shorts">
               <div class="left">
                 <iframe
-                  class="shorts-vd"
+                  class="shorts__vd"
                   src="https://www.youtube.com/embed/VbKSgp2qdvU"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; autoplay"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
                 ></iframe>
+                <div class="shorts__info">
+                  <div class="shorts__subs">
+                    <img
+                      src=""
+                      alt="channel photo"
+                      class="shorts__channel-img"
+                    />
+                    <h4 class="shorts__channel-name">aseghsrnj</h4>
+                  </div>
+                  <p class="shorts__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos voluptatem atque molestiae quia. Perferendis,
+                  </p>
+                </div>
               </div>
               <div class="short__btn">
                 <button class="like">
@@ -144,10 +152,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
-    <script src="./js/youtube.js"></script>
-    <script src="./js/btn.js"></script>
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/youtube.js"></script> -->
+    <script src="./js/shorts-data.js"></script>
+    <script src="./js/shorts.js"></script>
   </body>
 </html>

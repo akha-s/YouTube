@@ -1,11 +1,52 @@
 let params = new URLSearchParams(window.location.search);
 let detailVideo = document.querySelector(".detail__video");
 let otherVideos = document.querySelector(".detail__other-video");
-// let sidebar = document.querySelector(".sidebar");
 let elList = document.querySelector(".bi-list");
 let elInput = document.querySelector(".input");
 let elBody = document.querySelector("body");
 let searchId = params.get("id");
+let sidebarDetail = document.querySelector(".sidebar");
+let formComment = document.querySelector(".form");
+let inputComment = document.querySelector("#input");
+let inputName = document.querySelector("#name");
+let txt = document.querySelector(".all-commentary");
+
+let users = [];
+formComment.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let userComent = {
+    comentaryy: inputComment.value,
+    namesss: inputName,
+  };
+
+  users.push(userComent);
+  localStorage.setItem("user", JSON.stringify(users));
+  comment(JSON.parse(localStorage.getItem("user")));
+});
+
+function comment(arr) {
+  txt.innerHTML = "";
+  arr.forEach((el) => {
+    txt.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div class="one-comentary">
+        <img src="./assets/your avatar.png" alt="" />
+        <div class="one__items">
+          <div class="name">
+            <p class="name">@${el.namesss}</p>
+            <p class="vaqtcha">now</p>
+          </div>
+          <div class="text">
+            ${el.comentaryy}
+          </div>
+        </div>
+      </div>`
+    );
+  });
+}
+// comment(JSON.parse(localStorage.getItem("user", "usern ")));
 
 elList.onclick = () => {
   sidebar.classList.toggle("nonne");
@@ -140,5 +181,23 @@ otherVideos.addEventListener("click", (evt) => {
   if (evt.target.closest(".videos")) {
     let elId = evt.target.closest(".videos").dataset.id;
     window.location.href = `./detail.html?id=${elId}`;
+  }
+});
+
+sidebarDetail.addEventListener("click", (evt) => {
+  if (evt.target.matches(".home")) {
+    window.location.href = "http://127.0.0.1:8888/main.html";
+  }
+  if (evt.target.matches(".shorts-li")) {
+    window.location.href = "http://127.0.0.1:8888/shorts.html";
+  }
+  if (evt.target.matches(".subscription")) {
+    window.location.href = "http://127.0.0.1:8888/subscribe.html";
+  }
+  if (evt.target.matches(".library")) {
+    window.location.href = "http://127.0.0.1:8888/library.html";
+  }
+  if (evt.target.matches(".history")) {
+    window.location.href = "http://127.0.0.1:8888/history.html";
   }
 });

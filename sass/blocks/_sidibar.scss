@@ -6,7 +6,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
-  padding-top: 20px;
+  padding-top: 10px;
   border-right: 1px solid #ddd;
 
   @media (max-width: 1024px) {
@@ -236,9 +236,8 @@
   }
 }
 
-.shorts-vd {
-  width: 22.451vw;
-  height: 86vh;
+.short-need {
+  margin-left: 12%;
 }
 
 .box-need {
