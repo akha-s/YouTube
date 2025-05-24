@@ -1,7 +1,7 @@
 let params = new URLSearchParams(window.location.search);
 let detailVideo = document.querySelector(".detail__video");
 let otherVideos = document.querySelector(".detail__other-video");
-let sidebar = document.querySelector(".sidebar");
+// let sidebar = document.querySelector(".sidebar");
 let elList = document.querySelector(".bi-list");
 let elInput = document.querySelector(".input");
 let elBody = document.querySelector("body");
