@@ -423,6 +423,10 @@ img {
   height: 86vh;
 }
 
+.box-need {
+  width: 92%;
+}
+
 .detail__Wrapper {
   height: 94vh;
   overflow-y: scroll;

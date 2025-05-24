@@ -92,13 +92,11 @@ let imgs = document.querySelectorAll(".img-vd");
 elList.onclick = () => {
   sidebar.classList.toggle("nonne");
   Array.from(imgs).forEach((img) => img.classList.toggle("img-need"));
-  mainWrap.style.width = "92%";
+  mainWrap.classList.toggle("box-need");
 };
 
 sidebar.addEventListener("click", (evt) => {
   if (evt.target.matches(".shorts")) {
-    console.log("shorts");
-
     window.location.href = "http://127.0.0.1:8888/shorts.html";
   }
 });
