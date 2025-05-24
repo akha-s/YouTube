@@ -418,6 +418,11 @@ img {
     margin-left: 260px;
   }
 }
+.shorts-vd {
+  width: 22.451vw;
+  height: 86vh;
+}
+
 .detail__Wrapper {
   height: 94vh;
   overflow-y: scroll;

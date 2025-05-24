@@ -94,3 +94,11 @@ elList.onclick = () => {
   Array.from(imgs).forEach((img) => img.classList.toggle("img-need"));
   mainWrap.style.width = "92%";
 };
+
+sidebar.addEventListener("click", (evt) => {
+  if (evt.target.matches(".shorts")) {
+    console.log("shorts");
+
+    window.location.href = "http://127.0.0.1:8888/shorts.html";
+  }
+});
