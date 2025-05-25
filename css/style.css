@@ -34,12 +34,17 @@ img {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
   border-bottom: 1px solid #ddd;
   flex-wrap: wrap;
+  z-index: 1000;
 }
 @media (max-width: 768px) {
   .header {
@@ -178,15 +183,15 @@ img {
 }
 
 .sidebar {
-  width: 20%;
-  background-color: #fff;
+  min-width: 250px;
   height: 92vh;
+  background: white;
+  z-index: 999;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
   padding-top: 20px;
   border-right: 1px solid #ddd;
-  transition: width 0.3s;
 }
 @media (max-width: 1024px) {
   .sidebar {
@@ -268,6 +273,7 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
+  height: 100%;
 }
 
 .btns {
@@ -309,10 +315,9 @@ img {
 
 .buttons {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
-  padding: 13px 24px;
 }
 @media (max-width: 768px) {
   .buttons {
@@ -346,7 +351,7 @@ img {
 
 .vieo {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   padding: 20px;
   height: 78.5vh;
@@ -366,14 +371,18 @@ img {
   }
 }
 
-.img-vd {
-  max-width: 360px;
-  height: auto;
-  border-radius: 12px;
-}
-
 .image {
   position: relative;
+}
+
+.img-vd {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  min-width: 200px;
+  margin: 0 auto;
+  border-radius: 12px;
 }
 
 .time {
@@ -391,8 +400,23 @@ img {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 15px;
+  position: relative;
 }
 
+.nonne {
+  display: none;
+}
+
+.img-need {
+  max-width: 450px;
+}
+
+@keyframes deleting {
+  to {
+    margin-left: 260px;
+  }
+}
 .detail__Wrapper {
   padding: 24px;
   display: flex;
@@ -754,6 +778,11 @@ img {
   display: flex;
   gap: 5px;
   align-items: center;
+}
+
+.for-detail {
+  position: fixed;
+  top: 50px;
 }
 
 @media (max-width: 725px) {
