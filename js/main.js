@@ -19,7 +19,6 @@ Array.from(elBtn).forEach((el) => {
     });
 
     if (el.textContent == "ALL") {
-      console.log(el);
       displayVideo(videoData);
     } else {
       displayVideo(filterByType);
@@ -75,6 +74,10 @@ record.onresult = (evt) => {
   let words = evt.results[0][0].transcript;
   console.log(words);
   elInput.value = words;
+  let filtered = videoData.filter((el) =>
+    el.title.toLowerCase().includes(elInput.value.toLowerCase())
+  );
+  displayVideo(filtered);
 };
 
 displayVideo(videoData);

@@ -3,7 +3,8 @@ let detailVideo = document.querySelector(".detail__video");
 let otherVideos = document.querySelector(".detail__other-video");
 let elList = document.querySelector(".bi-list");
 let elInput = document.querySelector(".input");
-let elBody = document.querySelector("body");
+let biMic = document.querySelector(".bi-mic");
+let recordDetail = new webkitSpeechRecognition();
 let searchId = params.get("id");
 let sidebarDetail = document.querySelector(".sidebar");
 let formComment = document.querySelector(".form");
@@ -49,19 +50,34 @@ function comment(arr) {
 // comment(JSON.parse(localStorage.getItem("user", "usern ")));
 
 elList.onclick = () => {
-  sidebar.classList.toggle("nonne");
-  if (window.onclick === sidebar) {
-    sidebar.style.display = "none";
-  }
+  sidebarDetail.classList.toggle("nonne");
 };
 
 elInput.addEventListener("search", () => {
+  let filtered = videoData.filter((el) =>
+    el.title.toLowerCase().includes(elInput.value.toLowerCase())
+  );
   window.location.href = "http://127.0.0.1:8888/main.html";
+  displayVideo(filtered);
+});
+
+biMic.addEventListener("click", () => {
+  recordDetail.start();
+});
+
+recordDetail.onend = () => {
+  console.log("--- END ---");
+};
+
+recordDetail.onresult = (evt) => {
+  let words = evt.results[0][0].transcript;
+  console.log(words);
+  elInput.value = words;
   let filtered = videoData.filter((el) =>
     el.title.toLowerCase().includes(elInput.value.toLowerCase())
   );
   displayVideo(filtered);
-});
+};
 
 function formatNumber(n) {
   if (n >= 1_000_000)

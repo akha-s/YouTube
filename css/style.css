@@ -962,4 +962,9 @@ img {
   max-width: 32px;
   height: auto;
   border-radius: 50%;
+}
+
+.clicked-btn {
+  background-color: black;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

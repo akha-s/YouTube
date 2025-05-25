@@ -34,21 +34,21 @@ function displayShorts(arr) {
           </div>
         </div>
         <div class="short__btn">
-          <button class="like">
+          <button class="like user-like">
             <i class="bio bi-hand-thumbs-up-fill"></i>
           </button>
           <h4 class="inf">${formatNumber(shorts.likes)}</h4>
-          <button class="like">
+          <button class="like user-dislike">
             <i class="bio bi-hand-thumbs-down-fill"></i>
           </button>
           <h4 class="inf">${formatNumber(shorts.dislikes)}</h4>
-          <button class="like">
+          <button class="like user-comment">
             <i class="bio bi-chat-right-text-fill"></i>
           </button>
           <h4 class="inf">${formatNumber(shorts.comments)}</h4>
-          <button class="like"><i class="bio bi-share-fill"></i></button>
+          <button class="like user-share"><i class="bio bi-share-fill"></i></button>
           <h4 class="inf">Share</h4>
-          <button class="like">
+          <button class="like user-more">
             <i class="bio bi-three-dots-vertical"></i>
           </button>
           <img
@@ -67,6 +67,76 @@ function displayShorts(arr) {
 displayShorts(shortsData);
 
 let short = document.querySelectorAll(".shorts");
+let shortsBtn = document.querySelector(".short__btn");
+
+shortsBtn.addEventListener("click", (evt) => {
+  shortsData.forEach((shorts) => {
+    if (
+      evt.target.matches(".user-like") ||
+      evt.target.matches(".bi-hand-thumbs-up-fill")
+    ) {
+      shortsBtn.innerHTML = `
+                <div class="short__btn">
+          <button class="like user-like clicked-btn">
+            <i class="bio bi-hand-thumbs-up-fill"></i>
+          </button>
+          <h4 class="inf">${formatNumber(shorts.likes + 1)}</h4>
+          <button class="like user-dislike">
+            <i class="bio bi-hand-thumbs-down-fill"></i>
+          </button>
+          <h4 class="inf">${formatNumber(shorts.dislikes)}</h4>
+          <button class="like user-comment">
+            <i class="bio bi-chat-right-text-fill"></i>
+          </button>
+          <h4 class="inf">${formatNumber(shorts.comments)}</h4>
+          <button class="like user-share"><i class="bio bi-share-fill"></i></button>
+          <h4 class="inf">Share</h4>
+          <button class="like user-more">
+            <i class="bio bi-three-dots-vertical"></i>
+          </button>
+          <img
+            class="iml"
+            width="49px"
+            src="${shorts.channelPhoto}"
+            alt=""
+          />
+        </div>
+        `;
+    }
+    if (
+      evt.target.matches(".user-dislike") ||
+      evt.target.matches(".bi-hand-thumbs-down-fill")
+    ) {
+      shortsBtn.innerHTML = `
+                <div class="short__btn">
+          <button class="like user-like">
+            <i class="bio bi-hand-thumbs-up-fill"></i>
+          </button>
+          <h4 class="inf">${formatNumber(shorts.likes)}</h4>
+          <button class="like user-dislike clicked-btn">
+            <i class="bio bi-hand-thumbs-down-fill"></i>
+          </button>
+          <h4 class="inf">${formatNumber(shorts.dislikes + 1)}</h4>
+          <button class="like user-comment">
+            <i class="bio bi-chat-right-text-fill"></i>
+          </button>
+          <h4 class="inf">${formatNumber(shorts.comments)}</h4>
+          <button class="like user-share"><i class="bio bi-share-fill"></i></button>
+          <h4 class="inf">Share</h4>
+          <button class="like user-more">
+            <i class="bio bi-three-dots-vertical"></i>
+          </button>
+          <img
+            class="iml"
+            width="49px"
+            src="${shorts.channelPhoto}"
+            alt=""
+          />
+        </div>
+        `;
+    }
+  });
+});
 
 shortsList.addEventListener("scroll", () => {
   Array.from(short).forEach((short) => {
