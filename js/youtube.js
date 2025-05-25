@@ -200,21 +200,9 @@ let videoData = [
     category: "reals",
     src: "https://www.youtube.com/embed/7C4OCxvroU8",
   },
+
   {
     id: 16,
-    title: "Qodir Tolipov yangi vine #trend #kulamiz",
-    channel: "Kadir Tolipov",
-    channelPhoto:
-      "https://yt3.ggpht.com/ExnW-WpoEa9dVTo8n0fQRE2jjwjraFEdcGG9F1D6Mm3kiC1oYVOOZ0Jyes7Chj7RC73Vmu8zgQ=s88-c-k-c0x00ffffff-no-rj",
-    views: "1.5K",
-    uploaded: "2 days ago",
-    duration: "3:45",
-    thumbnail: "https://i.ytimg.com/vi/f1CaXzETGXo/hqdefault.jpg",
-    category: "reals",
-    src: "https://www.youtube.com/embed/f1CaXzETGXo",
-  },
-  {
-    id: 17,
     title: "O'zbekistondagi Eng Qimmat Aktyorlar",
     channel: "Yulduzlar Hayati",
     channelPhoto:
