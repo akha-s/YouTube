@@ -258,4 +258,22 @@ let videoData = [
     category: "Comedy",
     src: "https://www.youtube.com/embed/pmRCR6PbXnk",
   },
+  {
+    id: 9,
+    title: "Nizamo.S & Umida Odilova - Yonimda qol | Низамо.С & Умида Одилова - Ёнимда кол",
+    channel: "RIZA nova",
+    channelPhoto:
+      "https://yt3.ggpht.com/RgaUkLdAueTinVyeRN95_WNLohSq-mv2oViq-WefY4EjdGnQ5zlVHJgRswVreGbjgS3iIMRkyg=s88-c-k-c0x00ffffff-no-rj",
+    subscribers: 12000000,
+    views: "10M",
+    likes: 10000,
+    dislikes: 1000,
+    uploaded: "1 kun oldin",
+    duration: "2:46",
+    thumbnail: "thumbnails/yonimda-qol.avif",
+    category: "music",
+    src: "https://www.youtube.com/embed/ZIsxXFG5W4I",
+    like: 560,
+  },
 ];
+
