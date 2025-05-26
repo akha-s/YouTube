@@ -73,7 +73,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  bottom: 55px;
+  bottom: 65px;
   left: 10px;
   color: white;
 
@@ -93,4 +93,77 @@
 .clicked-btn {
   background-color: black;
   color: white;
+}
+
+.commentsss {
+  width: 40%;
+  height: 88vh;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+
+  .commentsss__name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .commentsss__title {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    gap: 10px;
+    align-items: end;
+
+    .number-comments {
+      font-size: 18px;
+      color: gray;
+      font-weight: 400;
+      margin-bottom: 2px;
+    }
+  }
+
+  .bi-x {
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  .commentsss__menu {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+    height: 80vh;
+    scrollbar-width: none;
+  }
+
+  .commentsss__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+
+    .com__top {
+      display: flex;
+      gap: 10px;
+    }
+
+    .com__bottom {
+      display: flex;
+      gap: 15px;
+      .com__likes {
+        font-weight: 500;
+      }
+
+      .com__reply {
+        color: blue;
+        font-weight: 500;
+      }
+    }
+  }
 }

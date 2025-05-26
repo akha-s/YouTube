@@ -30,7 +30,6 @@ img {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .header {
@@ -180,7 +179,7 @@ img {
 
 .sidebar {
   height: 90vh;
-  width: 12%;
+  width: 15%;
   background: white;
   z-index: 999;
   overflow-y: auto;
@@ -315,7 +314,7 @@ img {
 }
 
 .buttons {
-  width: 80%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -355,7 +354,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   padding: 20px;
-  width: 100%;
+  width: 94%;
   height: 82vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -375,6 +374,8 @@ img {
 
 .image {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .img-vd {
@@ -423,11 +424,11 @@ img {
 }
 
 .box-need {
-  width: 92%;
+  width: 100%;
 }
 
 .detail__Wrapper {
-  height: 94vh;
+  height: 92vh;
   overflow-y: scroll;
   scrollbar-width: none;
   padding: 24px;
@@ -952,7 +953,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  bottom: 55px;
+  bottom: 65px;
   left: 10px;
   color: white;
 }
@@ -970,4 +971,68 @@ img {
 .clicked-btn {
   background-color: black;
   color: white;
+}
+
+.commentsss {
+  width: 40%;
+  height: 88vh;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+}
+.commentsss .commentsss__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.commentsss .commentsss__title {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+.commentsss .commentsss__title .number-comments {
+  font-size: 18px;
+  color: gray;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.commentsss .bi-x {
+  font-size: 28px;
+  font-weight: 800;
+}
+.commentsss .commentsss__menu {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+  height: 80vh;
+  scrollbar-width: none;
+}
+.commentsss .commentsss__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+}
+.commentsss .commentsss__item .com__top {
+  display: flex;
+  gap: 10px;
+}
+.commentsss .commentsss__item .com__bottom {
+  display: flex;
+  gap: 15px;
+}
+.commentsss .commentsss__item .com__bottom .com__likes {
+  font-weight: 500;
+}
+.commentsss .commentsss__item .com__bottom .com__reply {
+  color: blue;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

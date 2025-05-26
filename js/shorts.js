@@ -1,6 +1,7 @@
 let sidebarShorts = document.querySelector(".sidebar");
 let shortsList = document.querySelector(".shorts__list");
 let biList = document.querySelector(".bi-list");
+let commentsss = document.querySelector(".commentsss");
 
 function formatNumber(n) {
   if (n >= 1_000_000)
@@ -8,6 +9,9 @@ function formatNumber(n) {
   if (n >= 1_000) return (n / 1_000).toFixed(1).replace(/\.0$/, "") + "K";
   return JSON.stringify(n);
 }
+
+let commentWrap = document.querySelector(".commentsss");
+let commentMenu = document.querySelector(".commentsss__menu");
 
 function displayShorts(arr) {
   shortsList.innerHTML = "";
@@ -24,12 +28,12 @@ function displayShorts(arr) {
           <div class="shorts__info">
             <div class="shorts__subs">
               <img src="${
-                shorts.channelPhoto
+                shorts.chanelPhoto
               }" alt="channel photo" class="shorts__channel-img" />
               <h4 class="shorts__channel-name">${shorts.channel}</h4>
             </div>
             <p class="shorts__text">
-              ${shorts.title}
+              ${shorts.tittle}
             </p>
           </div>
         </div>
@@ -41,11 +45,11 @@ function displayShorts(arr) {
           <button class="like user-dislike">
             <i class="bio bi-hand-thumbs-down-fill"></i>
           </button>
-          <h4 class="inf">${formatNumber(shorts.dislikes)}</h4>
+          <h4 class="inf">Dislike</h4>
           <button class="like user-comment">
             <i class="bio bi-chat-right-text-fill"></i>
           </button>
-          <h4 class="inf">${formatNumber(shorts.comments)}</h4>
+          <h4 class="inf comm">${formatNumber(shorts.commentsNum)}</h4>
           <button class="like user-share"><i class="bio bi-share-fill"></i></button>
           <h4 class="inf">Share</h4>
           <button class="like user-more">
@@ -61,6 +65,30 @@ function displayShorts(arr) {
     </div>
         `
     );
+    shorts.comments.forEach((com) => {
+      commentMenu.insertAdjacentHTML(
+        "beforeend",
+        `
+             <li class="commentsss__item">
+                <div class="com__top">
+                  <h4 class="com__user">${com.username}</h4>
+                  <p class="com__date">${com.date}</p>
+                </div>
+                <p class="com__text">${com.text}</p>
+                <div class="com__bottom">
+                  <p class="com__likes">
+                    <i class="bi bi-hand-thumbs-up"></i>
+                    ${com.likes}
+                  </p>
+                  <p class="com__reply">
+                    <i class="bi bi-chevron-down"></i>
+                    ${com.replies} replies
+                  </p>
+                </div>
+              </li>
+            `
+      );
+    });
   });
 }
 
@@ -76,7 +104,7 @@ shortsBtn.addEventListener("click", (evt) => {
       evt.target.matches(".bi-hand-thumbs-up-fill")
     ) {
       shortsBtn.innerHTML = `
-                <div class="short__btn">
+        <div class="short__btn">
           <button class="like user-like clicked-btn">
             <i class="bio bi-hand-thumbs-up-fill"></i>
           </button>
@@ -84,11 +112,11 @@ shortsBtn.addEventListener("click", (evt) => {
           <button class="like user-dislike">
             <i class="bio bi-hand-thumbs-down-fill"></i>
           </button>
-          <h4 class="inf">${formatNumber(shorts.dislikes)}</h4>
+          <h4 class="inf">Dislike</h4>
           <button class="like user-comment">
             <i class="bio bi-chat-right-text-fill"></i>
           </button>
-          <h4 class="inf">${formatNumber(shorts.comments)}</h4>
+          <h4 class="inf">${formatNumber(shorts.commentsNum)}</h4>
           <button class="like user-share"><i class="bio bi-share-fill"></i></button>
           <h4 class="inf">Share</h4>
           <button class="like user-more">
@@ -116,11 +144,11 @@ shortsBtn.addEventListener("click", (evt) => {
           <button class="like user-dislike clicked-btn">
             <i class="bio bi-hand-thumbs-down-fill"></i>
           </button>
-          <h4 class="inf">${formatNumber(shorts.dislikes + 1)}</h4>
+          <h4 class="inf">Dislike</h4>
           <button class="like user-comment">
             <i class="bio bi-chat-right-text-fill"></i>
           </button>
-          <h4 class="inf">${formatNumber(shorts.comments)}</h4>
+          <h4 class="inf">${formatNumber(shorts.commentsNum)}</h4>
           <button class="like user-share"><i class="bio bi-share-fill"></i></button>
           <h4 class="inf">Share</h4>
           <button class="like user-more">
@@ -135,7 +163,20 @@ shortsBtn.addEventListener("click", (evt) => {
         </div>
         `;
     }
+    if (
+      evt.target.matches(".user-comment") ||
+      evt.target.matches(".bi-chat-right-text-fill")
+    ) {
+      commentWrap.style.display = "inline-block";
+      document.querySelector(".user-comment").classList.toggle("clicked-btn");
+    }
   });
+});
+
+let closeX = document.querySelector(".bi-x");
+
+closeX.addEventListener("click", () => {
+  commentWrap.style.display = "none";
 });
 
 shortsList.addEventListener("scroll", () => {

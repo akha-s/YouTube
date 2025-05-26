@@ -1,6 +1,6 @@
 .sidebar {
   height: 90vh;
-  width: 12%;
+  width: 15%;
   background: white;
   z-index: 999;
   overflow-y: auto;
@@ -136,7 +136,7 @@
 }
 
 .buttons {
-  width: 80%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -174,7 +174,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   padding: 20px;
-  width: 100%;
+  width: 94%;
   height: 82vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -192,6 +192,8 @@
 
 .image {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .img-vd {
@@ -241,5 +243,5 @@
 }
 
 .box-need {
-  width: 92%;
+  width: 100%;
 }

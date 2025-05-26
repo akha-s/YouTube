@@ -14,7 +14,6 @@ let videoData = [
     thumbnail: "thumbnails/ruxsora.avif",
     category: "Music",
     src: "https://www.youtube.com/embed/8RBm0qKOmHY",
-    like: 102,
   },
   {
     id: 2,
@@ -31,7 +30,6 @@ let videoData = [
     thumbnail: "thumbnails/yoq-deyish.avif",
     category: "Shaxsiy rivojlanish",
     src: "https://www.youtube.com/embed/VaKz4Jbe6C0",
-    like: 240,
   },
   {
     id: 3,
@@ -49,7 +47,6 @@ let videoData = [
     thumbnail: "thumbnails/ai-5x.avif",
     category: "Texnologiya",
     src: "https://www.youtube.com/embed/Oxe8LZYK31w",
-    like: 780,
   },
   {
     id: 4,
@@ -66,7 +63,6 @@ let videoData = [
     thumbnail: "thumbnails/tirik-kitob.avif",
     category: "Madaniyat",
     src: "https://www.youtube.com/embed/bdEYgtmzQdk",
-    like: 304,
   },
   {
     id: 5,
@@ -83,7 +79,6 @@ let videoData = [
     thumbnail: "thumbnails/minecraft.avif",
     category: "O'yinlar",
     src: "https://www.youtube.com/embed/CgZ5ukSgubc",
-    like: 932,
   },
   {
     id: 6,
@@ -100,7 +95,6 @@ let videoData = [
     thumbnail: "thumbnails/aqlliroq.avif",
     category: "Shaxsiy rivojlanish",
     src: "https://www.youtube.com/embed/cA1Q5bFY5Z8",
-    like: 65,
   },
   {
     id: 7,
@@ -118,7 +112,6 @@ let videoData = [
     thumbnail: "thumbnails/dangasalikka-qarshi.avif",
     category: "Motivatsiya",
     src: "https://www.youtube.com/embed/uul53emqf10",
-    like: 130,
   },
   {
     id: 8,
@@ -135,24 +128,19 @@ let videoData = [
     thumbnail: "thumbnails/ronaldo.avif",
     category: "Sport",
     src: "https://www.youtube.com/embed/XXYbVpkI-UY",
-    like: 560,
   },
   {
     id: 9,
     title: "Sheriff of Oddsville | Oddbods Cartoons | Funny Cartoons For Kids",
     channel: "Oddbods Cartoons",
     channelPhoto:
-      "https://yt3.ggpht.com/RgaUkLdAueTinVyeRN95_WNLohSq-mv2oViq-WefY4EjdGnQ5zlVHJgRswVreGbjgS3iIMRkyg=s88-c-k-c0x00ffffff-no-rj",
-    subscribers: 12000000,
-    views: "10M",
-    likes: 10000,
-    dislikes: 1000,
-    uploaded: "1 kun oldin",
-    duration: "2:46",
-    thumbnail: "thumbnails/yonimda-qol.avif",
-    category: "music",
-    src: "https://www.youtube.com/embed/ZIsxXFG5W4I",
-    like: 560,
+      "https://yt3.ggpht.com/6NeRLv3A-I9qna5Mk158cCVpqs54oIC0-2XqpKpAIVXxHyK_IcWlfwNhBP07KlCUCxHJfNTAy4Y=s68-c-k-c0x00ffffff-no-rj", // Agar siz aniq URL berishni istasangiz, bu yerga haqiqiy rasm manzili kiritiladi.
+    views: "2.1M",
+    uploaded: "4 months ago",
+    duration: "1:37:47",
+    thumbnail: "thumbnails/oddbods.avif",
+    category: "Kids",
+    src: "https://www.youtube.com/embed/Kdnri6JLJqY", // Video ID yo‘q, shuning uchun linkni to‘liq ko‘rsata olmayman.
   },
 
   {
@@ -236,7 +224,6 @@ let videoData = [
     category: "Comedy",
     src: "https://www.youtube.com/embed/7C4OCxvroU8",
   },
-
   {
     id: 16,
     title: "Qodir Tolipov yangi vine #trend #kulamiz",
@@ -260,25 +247,7 @@ let videoData = [
     uploaded: "3 years ago",
     duration: "2:52",
     thumbnail: "thumbnails/pp.avif",
-    category: "Comedy",
+    category: "Mashxurlar",
     src: "https://www.youtube.com/embed/pmRCR6PbXnk",
   },
-  {
-    id: 9,
-    title: "Nizamo.S & Umida Odilova - Yonimda qol | Низамо.С & Умида Одилова - Ёнимда кол",
-    channel: "RIZA nova",
-    channelPhoto:
-      "https://yt3.ggpht.com/RgaUkLdAueTinVyeRN95_WNLohSq-mv2oViq-WefY4EjdGnQ5zlVHJgRswVreGbjgS3iIMRkyg=s88-c-k-c0x00ffffff-no-rj",
-    subscribers: 12000000,
-    views: "10M",
-    likes: 10000,
-    dislikes: 1000,
-    uploaded: "1 kun oldin",
-    duration: "2:46",
-    thumbnail: "thumbnails/yonimda-qol.avif",
-    category: "music",
-    src: "https://www.youtube.com/embed/ZIsxXFG5W4I",
-    like: 560,
-  },
 ];
-
