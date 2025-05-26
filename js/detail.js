@@ -14,22 +14,23 @@ let txt = document.querySelector(".all-commentary");
 let users = [];
 formComment.addEventListener("submit", (e) => {
   e.preventDefault();
+  if (inputComment.value.trim() === "" || inputName.value.trim() == "") return;
 
   let userComent = {
     come: inputComment.value,
     namess: inputName.value,
   };
-
   users.push(userComent);
   localStorage.setItem("user", JSON.stringify(users));
   comment(JSON.parse(localStorage.getItem("user")));
+  inputName.value = ""
 });
 
 function comment(arr) {
   txt.innerHTML = "";
   arr.forEach((el) => {
     txt.insertAdjacentHTML(
-      "afterstart",
+      "afterbegin",
       `
       <div class="one-comentary">
         <img src="./assets/your avatar.png" alt="" />
@@ -46,7 +47,7 @@ function comment(arr) {
     )
   })
 }
-// comment(JSON.parse(localStorage.getItem("user", "usern ")));
+comment(JSON.parse(localStorage.getItem("user")));
 
 elList.onclick = () => {
   sidebar.classList.toggle("nonne");
