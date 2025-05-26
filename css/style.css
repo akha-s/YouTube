@@ -863,6 +863,9 @@ img {
   .join-channel {
     display: none !important;
   }
+  .detail__Wrapper {
+    padding: 0 !important;
+  }
 }
 @media (max-width: 650px) {
   .detail__other-video {
