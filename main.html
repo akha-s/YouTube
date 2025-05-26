@@ -6,6 +6,11 @@
     <title>YouTube</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link
+      rel="shortcut icon"
+      href="./assets/mini-logo.svg"
+      type="image/x-icon"
+    />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
@@ -18,8 +23,14 @@
           <div class="header__wrap">
             <div class="header">
               <div class="left">
-                <i class="bi bi-list"></i>
-                <img src="./YouTube logo.png" class="logo" alt="YouTube Logo" />
+                <i class="bi bi-list" id="toggleSidebar"></i>
+                <a href="./main.html" class="main">
+                  <img
+                    src="./assets/youtube-logo.svg"
+                    class="logo"
+                    alt="YouTube Logo"
+                  />
+                </a>
               </div>
               <div class="center">
                 <div class="search-bar">
@@ -44,21 +55,21 @@
       <section class="section__one">
         <div class="container">
           <div class="sidiber">
-            <div class="sidebar">
-              <div class="menu-item active">
+            <div class="sidebar" style="height: 90vh">
+              <div class="menu-item home active">
                 <i class="bi bi-house-fill"></i> Home
               </div>
-              <div class="menu-item">
+              <div class="menu-item shorts-li">
                 <i class="bi bi-lightning-fill"></i> Shorts
               </div>
-              <div class="menu-item">
+              <div class="menu-item subscription">
                 <i class="bi bi-collection-play"></i> Subscriptions
               </div>
               <hr />
-              <div class="menu-item">
+              <div class="menu-item library">
                 <i class="bi bi-play-btn"></i> Library
               </div>
-              <div class="menu-item">
+              <div class="menu-item history">
                 <i class="bi bi-arrow-counterclockwise"></i> History
               </div>
 
@@ -96,7 +107,6 @@
               </div>
               <div class="menu-item"><i class="bi bi-mic"></i> Podcasts</div>
             </div>
-
             <div class="buttons">
               <ul class="btns">
                 <li class="btn-li">

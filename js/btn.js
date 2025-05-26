@@ -1,9 +1,9 @@
 let types = new Set(videoData.map((el) => el.category));
 let btns = document.querySelector(".btns");
 
-function createBtn(parentEl, arr) {
+function createBtn(arr) {
   arr.forEach((el) => {
-    parentEl.insertAdjacentHTML(
+    btns.insertAdjacentHTML(
       "beforeend",
       `
       <li class="btn-li">
@@ -14,4 +14,4 @@ function createBtn(parentEl, arr) {
   });
 }
 
-console.log(createBtn(btns, types));
+createBtn(types);

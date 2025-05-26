@@ -1,13 +1,13 @@
 .sidebar {
-  width: 20%;
-  background-color: #fff;
-  height: 92vh;
+  height: 90vh;
+  width: 12%;
+  background: white;
+  z-index: 999;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
-  padding-top: 20px;
+  padding-top: 10px;
   border-right: 1px solid #ddd;
-  transition: width 0.3s;
 
   @media (max-width: 1024px) {
     width: 80px;
@@ -61,7 +61,7 @@
 .sign__in {
   font-weight: 400;
   font-size: 18px;
-  width: 210px;
+  max-width: 210px;
   margin-top: 13px;
   margin-left: 20px;
 }
@@ -73,6 +73,7 @@
 }
 
 .siign-in {
+  max-width: max-content;
   margin-left: 13px;
   border: 1px solid #065fd4;
   color: #065fd4;
@@ -92,13 +93,16 @@
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
+  width: 100vw;
+  height: 100%;
 }
 
 .btns {
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   gap: 12px;
-  overflow-x: auto;
+  overflow-x: scroll;
   padding: 10px 20px;
   scrollbar-width: none;
 
@@ -111,6 +115,8 @@
   min-width: max-content;
   padding: 10px 13px;
   border-radius: 10px;
+  overflow-y: auto;
+
   border: none;
   background-color: #a9a6a6;
   color: rgb(47, 47, 47);
@@ -130,11 +136,10 @@
 }
 
 .buttons {
-  width: 100%;
-  max-width: 1200px;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  padding: 13px 24px;
+  flex-wrap: wrap;
 
   @media (max-width: 768px) {
     padding: 13px;
@@ -166,10 +171,11 @@
 
 .vieo {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   padding: 20px;
-  height: 78.5vh;
+  width: 100%;
+  height: 82vh;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -184,14 +190,17 @@
   }
 }
 
-.img-vd {
-  max-width: 360px;
-  height: auto;
-  border-radius: 12px;
-}
-
 .image {
   position: relative;
+}
+
+.img-vd {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
 }
 
 .time {
@@ -209,4 +218,28 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 15px;
+  position: relative;
+}
+
+.nonne {
+  display: none;
+}
+
+.img-need {
+  max-width: 450px;
+}
+
+@keyframes deleting {
+  to {
+    margin-left: 260px;
+  }
+}
+
+.short-need {
+  margin-left: 12%;
+}
+
+.box-need {
+  width: 92%;
 }
