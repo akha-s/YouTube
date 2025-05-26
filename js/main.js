@@ -3,6 +3,11 @@ let elBtn = document.querySelectorAll(".btn");
 let elInput = document.querySelector(".input");
 let elList = document.querySelector(".bi-list");
 let sidebar = document.querySelector(".sidebar");
+let mainWrap = document.querySelector(".buttons");
+let elMic = document.querySelector(".bi-mic");
+let record = new webkitSpeechRecognition();
+
+record.lang = "uz-UZ";
 
 Array.from(elBtn).forEach((el) => {
   el.addEventListener("click", () => {
@@ -58,6 +63,20 @@ elInput.addEventListener("input", () => {
   displayVideo(filtered);
 });
 
+elMic.addEventListener("click", () => {
+  record.start();
+});
+
+record.onend = () => {
+  console.log("--- END ---");
+};
+
+record.onresult = (evt) => {
+  let words = evt.results[0][0].transcript;
+  console.log(words);
+  elInput.value = words;
+};
+
 displayVideo(videoData);
 
 videoList.addEventListener("click", (evt) => {
@@ -72,4 +91,23 @@ let imgs = document.querySelectorAll(".img-vd");
 elList.onclick = () => {
   sidebar.classList.toggle("nonne");
   Array.from(imgs).forEach((img) => img.classList.toggle("img-need"));
+  mainWrap.classList.toggle("box-need");
 };
+
+sidebar.addEventListener("click", (evt) => {
+  if (evt.target.matches(".home")) {
+    window.location.href = "http://127.0.0.1:8888/main.html";
+  }
+  if (evt.target.matches(".shorts-li")) {
+    window.location.href = "http://127.0.0.1:8888/shorts.html";
+  }
+  if (evt.target.matches(".subscription")) {
+    window.location.href = "http://127.0.0.1:8888/subscribe.html";
+  }
+  if (evt.target.matches(".library")) {
+    window.location.href = "http://127.0.0.1:8888/library.html";
+  }
+  if (evt.target.matches(".history")) {
+    window.location.href = "http://127.0.0.1:8888/history.html";
+  }
+});

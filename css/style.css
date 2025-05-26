@@ -34,17 +34,13 @@ img {
 }
 
 .header {
-  position: fixed;
-  top: 0;
   background-color: white;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
   border-bottom: 1px solid #ddd;
   flex-wrap: wrap;
-  z-index: 1000;
 }
 @media (max-width: 768px) {
   .header {
@@ -183,14 +179,14 @@ img {
 }
 
 .sidebar {
-  min-width: 250px;
-  height: 92vh;
+  height: 90vh;
+  width: 12%;
   background: white;
   z-index: 999;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
-  padding-top: 20px;
+  padding-top: 10px;
   border-right: 1px solid #ddd;
 }
 @media (max-width: 1024px) {
@@ -242,7 +238,7 @@ img {
 .sign__in {
   font-weight: 400;
   font-size: 18px;
-  width: 210px;
+  max-width: 210px;
   margin-top: 13px;
   margin-left: 20px;
 }
@@ -254,6 +250,8 @@ img {
 }
 
 .siign-in {
+  max-width: -moz-max-content;
+  max-width: max-content;
   margin-left: 13px;
   border: 1px solid #065fd4;
   color: #065fd4;
@@ -273,14 +271,16 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
+  width: 100vw;
   height: 100%;
 }
 
 .btns {
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   gap: 12px;
-  overflow-x: auto;
+  overflow-x: scroll;
   padding: 10px 20px;
   scrollbar-width: none;
 }
@@ -295,6 +295,7 @@ img {
   min-width: max-content;
   padding: 10px 13px;
   border-radius: 10px;
+  overflow-y: auto;
   border: none;
   background-color: #a9a6a6;
   color: rgb(47, 47, 47);
@@ -314,10 +315,10 @@ img {
 }
 
 .buttons {
-  width: 100%;
-  max-width: 1440px;
+  width: 80%;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 @media (max-width: 768px) {
   .buttons {
@@ -354,7 +355,8 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   padding: 20px;
-  height: 78.5vh;
+  width: 100%;
+  height: 82vh;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -380,7 +382,6 @@ img {
   max-width: 100%;
   width: auto;
   height: auto;
-  min-width: 200px;
   margin: 0 auto;
   border-radius: 12px;
 }
@@ -417,7 +418,18 @@ img {
     margin-left: 260px;
   }
 }
+.short-need {
+  margin-left: 12%;
+}
+
+.box-need {
+  width: 92%;
+}
+
 .detail__Wrapper {
+  height: 94vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
   padding: 24px;
   display: flex;
   justify-content: space-between;
@@ -427,7 +439,7 @@ img {
   padding: 5px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 .detail__Wrapper .detail__other-video .videos {
   display: flex;
@@ -436,7 +448,7 @@ img {
 }
 .detail__Wrapper .detail__other-video .videos img {
   border-radius: 10px;
-  max-width: 50%;
+  max-width: 60%;
 }
 .detail__Wrapper .detail__other-video .videos .items {
   display: flex;
@@ -781,8 +793,12 @@ img {
 }
 
 .for-detail {
-  position: fixed;
+  position: absolute;
   top: 50px;
+}
+
+.nonne {
+  display: none;
 }
 
 @media (max-width: 725px) {
@@ -857,4 +873,93 @@ img {
   .org-vd {
     height: 500px !important;
   }
+}
+.shorts__wrapper {
+  display: flex;
+}
+
+.shorts__list {
+  width: 82%;
+  height: 90vh;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.shorts {
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: end;
+  display: flex;
+  padding-bottom: 12px;
+  gap: 10px;
+  height: 88vh;
+  scroll-snap-align: start;
+}
+
+.short__btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.like {
+  max-width: 48px;
+  border-radius: 50%;
+  padding: 13px 13px;
+  border: none;
+}
+
+.iml {
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 8px;
+}
+
+.bio {
+  font-size: 20px;
+}
+
+.shorts__vd {
+  border-radius: 15px;
+  border: none;
+  min-width: 380px;
+  max-width: 420px;
+  height: 42vw;
+}
+
+.inf {
+  text-align: center;
+}
+
+.left {
+  position: relative;
+}
+
+.shorts__info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  bottom: 55px;
+  left: 10px;
+  color: white;
+}
+.shorts__info .shorts__subs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.shorts__info .shorts__channel-img {
+  max-width: 32px;
+  height: auto;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */

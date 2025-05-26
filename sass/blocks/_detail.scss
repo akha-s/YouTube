@@ -1,4 +1,7 @@
 .detail__Wrapper {
+  height: 94vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
   padding: 24px;
   display: flex;
   justify-content: space-between;
@@ -7,14 +10,14 @@
     padding: 5px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     .videos {
       display: flex;
       align-items: flex-start;
       gap: 10px;
       img {
         border-radius: 10px;
-        max-width: 50%;
+        max-width: 60%;
       }
       .items {
         display: flex;
@@ -104,7 +107,7 @@
       display: flex;
       width: 100%;
       gap: 20px;
-      img{
+      img {
         width: 40px;
         height: 40px;
       }
@@ -295,4 +298,13 @@
   @include join-button($primary, $bg-color);
 }
 .none{
+}
+
+.for-detail {
+  position: absolute;
+  top: 50px;
+}
+
+.nonne {
+  display: none;
 }
