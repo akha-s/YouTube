@@ -17,8 +17,8 @@ formComment.addEventListener("submit", (e) => {
   e.preventDefault();
 
   let userComent = {
-    comentaryy: inputComment.value,
-    namesss: inputName,
+    come: inputComment.value,
+    namess: inputName.value,
   };
 
   users.push(userComent);
@@ -30,17 +30,17 @@ function comment(arr) {
   txt.innerHTML = "";
   arr.forEach((el) => {
     txt.insertAdjacentHTML(
-      "beforeend",
+      "afterstart",
       `
       <div class="one-comentary">
         <img src="./assets/your avatar.png" alt="" />
         <div class="one__items">
           <div class="name">
-            <p class="name">@${el.namesss}</p>
+            <p class="name">@${el.namess}</p>
             <p class="vaqtcha">now</p>
           </div>
           <div class="text">
-            ${el.comentaryy}
+            ${el.come}
           </div>
         </div>
       </div>`
@@ -83,7 +83,7 @@ function formatNumber(n) {
   if (n >= 1_000_000)
     return (n / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M";
   if (n >= 1_000) return (n / 1_000).toFixed(1).replace(/\.0$/, "") + "K";
-  return n.toString();
+  return JSON.stringify(n);
 }
 
 let findVideo = videoData.find((el) => el.id == searchId);

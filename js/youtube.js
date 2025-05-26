@@ -142,13 +142,17 @@ let videoData = [
     title: "Sheriff of Oddsville | Oddbods Cartoons | Funny Cartoons For Kids",
     channel: "Oddbods Cartoons",
     channelPhoto:
-      "https://yt3.ggpht.com/6NeRLv3A-I9qna5Mk158cCVpqs54oIC0-2XqpKpAIVXxHyK_IcWlfwNhBP07KlCUCxHJfNTAy4Y=s68-c-k-c0x00ffffff-no-rj", // Agar siz aniq URL berishni istasangiz, bu yerga haqiqiy rasm manzili kiritiladi.
-    views: "2.1M",
-    uploaded: "4 months ago",
-    duration: "1:37:47",
-    thumbnail: "thumbnails/oddbods.avif",
-    category: "Kids",
-    src: "https://www.youtube.com/embed/Kdnri6JLJqY", // Video ID yo‘q, shuning uchun linkni to‘liq ko‘rsata olmayman.
+      "https://yt3.ggpht.com/RgaUkLdAueTinVyeRN95_WNLohSq-mv2oViq-WefY4EjdGnQ5zlVHJgRswVreGbjgS3iIMRkyg=s88-c-k-c0x00ffffff-no-rj",
+    subscribers: 12000000,
+    views: "10M",
+    likes: 10000,
+    dislikes: 1000,
+    uploaded: "1 kun oldin",
+    duration: "2:46",
+    thumbnail: "thumbnails/yonimda-qol.avif",
+    category: "music",
+    src: "https://www.youtube.com/embed/ZIsxXFG5W4I",
+    like: 560,
   },
 
   {
