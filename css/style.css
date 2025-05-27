@@ -903,7 +903,7 @@ img {
   justify-content: center;
   align-items: end;
   display: flex;
-  padding-bottom: 12px;
+  padding-top: 20px;
   gap: 10px;
   height: 88vh;
   scroll-snap-align: start;
@@ -1035,4 +1035,9 @@ img {
 .commentsss .commentsss__item .com__bottom .com__reply {
   color: blue;
   font-weight: 500;
+}
+
+.subs__menu {
+  padding: 20px;
+  background-color: black;
 }/*# sourceMappingURL=style.css.map */

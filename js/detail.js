@@ -27,28 +27,28 @@ formComment.addEventListener("submit", (e) => {
   inputName.value = ""
 });
 
-function comment(arr) {
+function commentDisplay(arr) {
   txt.innerHTML = "";
   arr.forEach((el) => {
     txt.insertAdjacentHTML(
       "afterbegin",
       `
       <div class="one-comentary">
-        <img src="./assets/your avatar.png" alt="" />
+        <img src="./assets/have-acc.jpg" alt="" />
         <div class="one__items">
           <div class="name">
-            <p class="name">@${el.namess}</p>
-            <p class="vaqtcha">now</p>
+            <p class="name">${el.username}</p>
+            <p class="vaqtcha">${el.date}</p>
           </div>
           <div class="text">
-            ${el.come}
+            ${el.text}
           </div>
         </div>
       </div>`
     );
   });
 }
-comment(JSON.parse(localStorage.getItem("user")));
+commentDisplay(commentsOrg);
 
 elList.onclick = () => {
   sidebarDetail.classList.toggle("nonne");
