@@ -1037,7 +1037,44 @@ img {
   font-weight: 500;
 }
 
+.subs__wrapper {
+  display: flex;
+}
+
 .subs__menu {
+  width: 100%;
   padding: 20px;
-  background-color: black;
+  height: 92vh;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+
+.subs__pr {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.subs__vd {
+  background-color: lightpink;
+}
+
+.subs-need {
+  width: 85%;
+}
+
+.sub__pr {
+  max-width: 300px;
+  min-width: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 15px;
+  border: 1px solid gray;
+}
+.sub__pr .sub__pr-img {
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */

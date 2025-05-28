@@ -24,7 +24,7 @@ formComment.addEventListener("submit", (e) => {
   users.push(userComent);
   localStorage.setItem("user", JSON.stringify(users));
   comment(JSON.parse(localStorage.getItem("user")));
-  inputName.value = ""
+  inputName.value = "";
 });
 
 function commentDisplay(arr) {

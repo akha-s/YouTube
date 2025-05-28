@@ -1,10 +1,51 @@
 let sidebarSubs = document.querySelector(".sidebar");
 let subList = document.querySelector(".bi-list");
+let subsMenu = document.querySelector(".subs__menu");
+let subsPr = document.querySelector(".subs__pr");
+let subsVd = document.querySelector(".subs__vd");
+let subBtn = document.querySelector(".subscribe");
+console.log(subBtn);
 
+let subed = [];
+
+subBtn.onclick = () => {
+  subBtn.textContent = "Subscribed";
+  subBtn.style.background = "gray";
+  let params = new URLSearchParams(window.location.search);
+  subed.push(params.get("id"));
+  console.log(subed);
+  localStorage.setItem("subscribed", JSON.stringify(subed));
+};
+
+function formatNumber(n) {
+  if (n >= 1_000_000)
+    return (n / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M";
+  if (n >= 1_000) return (n / 1_000).toFixed(1).replace(/\.0$/, "") + "K";
+  return n.toString();
+}
+
+JSON.parse(subed).forEach((el) => {
+  videoData.forEach((vd) => {
+    if (el == vd.id) {
+      subsPr.insertAdjacentHTML(
+        "beforeend",
+        `
+        <div class="sub__pr">
+          <img src="${vd.channelPhoto}" alt="" class="sub__pr-img">
+          <h3 class="sub__pr-title">${vd.channel}</h3>
+          <p class="sub__pr-text">${formatNumber(
+            vd.subscribers
+          )} subscribers</p>
+        </div>
+        `
+      );
+    }
+  });
+});
 
 subList.onclick = () => {
   sidebarSubs.classList.toggle("nonne");
-  // shortsList.classList.toggle("short-need");
+  subsMenu.classList.toggle("subs-need");
 };
 
 sidebarSubs.addEventListener("click", (evt) => {
