@@ -194,10 +194,10 @@ biList.onclick = () => {
 
 sidebarShorts.addEventListener("click", (evt) => {
   if (evt.target.matches(".home")) {
-    window.location.href = "http://127.0.0.1:8888/main.html";
+    window.location.href = "http://127.0.0.1:5501/";
   }
   if (evt.target.matches(".shorts-li")) {
-    window.location.href = "http://127.0.0.1:8888/shorts.html";
+    window.location.href = "http://127.0.0.1:5501/shorts.html";
   }
   if (evt.target.matches(".subscription")) {
     window.location.href = "http://127.0.0.1:8888/subscribe.html";
