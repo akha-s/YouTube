@@ -199,13 +199,4 @@ sidebarShorts.addEventListener("click", (evt) => {
   if (evt.target.matches(".shorts-li")) {
     window.location.href = "http://127.0.0.1:5501/shorts.html";
   }
-  if (evt.target.matches(".subscription")) {
-    window.location.href = "http://127.0.0.1:8888/subscribe.html";
-  }
-  if (evt.target.matches(".library")) {
-    window.location.href = "http://127.0.0.1:8888/library.html";
-  }
-  if (evt.target.matches(".history")) {
-    window.location.href = "http://127.0.0.1:8888/history.html";
-  }
 });
